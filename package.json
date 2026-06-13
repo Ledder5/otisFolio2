@@ -21,5 +21,9 @@
     "astro-icon": "^1.1.5",
     "tailwindcss": "^4.2.0",
     "typescript": "^5.9.3"
+  },
+  "allowScripts": {
+    "sharp@0.34.5": true,
+    "esbuild@0.27.7": true
   }
 }
