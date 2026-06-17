@@ -3,33 +3,52 @@
     {
       "title": "Mechanical Design",
       "skills": [
-        { "name": "Fusion 360", "level": 3, "icon": "skill-icons:flutter-dark" },
-        { "name": "Blender", "level": 2, "icon": "skill-icons:dart-dark" }
+        { "name": "Fusion 360", "level": 3, "icon": "devicon:fusion" },
+        { "name": "Blender", "level": 2, "icon": "devicon:blender" }
       ]
     },
     {
       "title": "Electrical Design",
       "skills": [
-        { "name": "Fusion 360", "level": 2, "icon": "skill-icons:astro" },
-        { "name": "OrCAD", "level": 2, "icon": "skill-icons:html" },
+        { "name": "Fusion 360", "level": 3, "icon": "devicon:fusion" },
+        { "name": "OrCAD", "level": 2, "icon": "OrCAD_Logo" },
         { "name": "KiCad", "level": 1, "icon": "skill-icons:css" }
       ]
     },
     {
       "title": "Software Engineering",
       "skills": [
-        { "name": "C++", "level": 3, "icon": "skill-icons:fastapi" },
+        { "name": "C++", "level": 3, "icon": "devicon:cplusplus" },
         { "name": "Python", "level": 2, "icon": "skill-icons:python-dark" },
-        { "name": "MATLAB", "level": 3, "icon": "vscode-icons:file-type-firebase" }
+        { "name": "MATLAB", "level": 3, "icon": "skill-icons:matlab-dark" },
+        { "name": "Github", "level": 1, "icon": "skill-icons:github-dark" }
       ]
     },
     {
       "title": "Manufacture",
       "skills": [
         { "name": "3D Printing", "level": 3, "icon": "skill-icons:sqlite" },
-        { "name": "CNC Routing", "level": 3, "icon": "skill-icons:postgresql-dark" },
-        { "name": "PCB Routing", "level": 3, "icon": "skill-icons:postgresql-dark" },
+        { "name": "CNC Routing", "level": 2, "icon": "skill-icons:postgresql-dark" },
+        { "name": "PCB Routing", "level": 2, "icon": "skill-icons:postgresql-dark" },
         { "name": "Laser Cutting", "level": 2, "icon": "skill-icons:postgresql-dark" }
+      ]
+    },
+    {
+      "title": "Micro-Controllers",
+      "skills": [
+        { "name": "Arduino", "level": 3, "icon": "devicon:arduino" },
+        { "name": "ESP32", "level": 2, "icon": "skill-icons:postgresql-dark" },
+        { "name": "Teensy", "level": 3, "icon": "skill-icons:postgresql-dark" },
+        { "name": "STM32", "level": 1, "icon": "skill-icons:postgresql-dark" }
+      ]
+    },
+    {
+      "title": "Graphic Design",
+      "skills": [
+        { "name": "Inkscape", "level": 3, "icon": "devicon:inkscape" },
+        { "name": "GIMP", "level": 2, "icon": "devicon:gimp" },
+        { "name": "Blender", "level": 2, "icon": "devicon:blender" },
+        { "name": "Concepts", "level": 3, "icon": "concepts" }
       ]
     }
   ]
