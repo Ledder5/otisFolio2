@@ -1,16 +1,124 @@
 [
   {
-    "title": "Awesome Website",
-    "description": "A high-performance, SEO-optimized web application built with modern frameworks to showcase technical expertise.",
+    "title": "Daisy Chain Making Robot",
+    "description": "My final year project involving the design and implementation of a robot capable of creating daisy chains. This project received the highest possible grade and was highlighted by the University Of Glasgow at events and in media.",
     "images": ["astro-01.webp", "astro-02.jpeg"],
     "tech": ["Astro", "Tailwind"],
     "platforms": ["web"],
     "link": "https://astro.build/themes/details/career-portfolio-data-driven-astro-ssg/",
-    "category": "Published Website"
+    "category": "University Project"
   },
   {
-    "title": "Demo Mobile App",
-    "description": "A high-performance mobile application built with modern frameworks to showcase technical expertise.",
+    "title": "NFC Record Player",
+    "description": "An record stand that scans NFC tags and communicates with the spotify API in order to play the coresponding albums on your devices.",
+    "images": ["astro-02.jpeg", "#"],
+    "tech": ["Flutter", "Dart", "REST API"],
+    "platforms": ["apple-ios", "android"],
+    "link": "https://github.com/nbakh16/career-portfolio-template",
+    "category": "Hobby"
+  },
+  {
+    "title": "Buckets and Buckets of Light",
+    "description": "In colaboration with Jack Wimperis, we designed and built a 6 x 4 x 100 pixel LED Matrix with a fully 3d and reactive programme developed by me in TouchDesigner. This sculpture was displayed at the award winning 'Leeds Light Night' in 2025. For this project I also made a fully punctional scale replica of the sculpture for programme development and marketing.",
+    "images": ["astro-02.jpeg", "#"],
+    "tech": ["Flutter", "Dart", "REST API"],
+    "platforms": ["apple-ios", "android"],
+    "link": "https://github.com/nbakh16/career-portfolio-template",
+    "category": "Hobby"
+  },
+  {
+    "title": "Crystal Lamps",
+    "description": "Modern desk lamp",
+    "images": ["astro-02.jpeg", "#"],
+    "tech": ["Flutter", "Dart", "REST API"],
+    "platforms": ["apple-ios", "android"],
+    "link": "https://github.com/nbakh16/career-portfolio-template",
+    "category": "Hobby"
+  },
+  {
+    "title": "Starlight Clock",
+    "description": "A magical Clock that reveals the time in a star constelation when activated by a motion sensor.",
+    "images": ["astro-02.jpeg", "#"],
+    "tech": ["Flutter", "Dart", "REST API"],
+    "platforms": ["apple-ios", "android"],
+    "link": "https://github.com/nbakh16/career-portfolio-template",
+    "category": "Hobby"
+  },
+  {
+    "title": "Mechanical Sinosoid Generator",
+    "description": "Purely mechanical device that can draw a perfect sinosoid as well as calcualte its values using a series of linkages.",
+    "images": ["astro-02.jpeg", "#"],
+    "tech": ["Flutter", "Dart", "REST API"],
+    "platforms": ["apple-ios", "android"],
+    "link": "https://github.com/nbakh16/career-portfolio-template",
+    "category": "Hobby"
+  },
+  {
+    "title": "Custom 'Tamagotchi'",
+    "description": "A pocket sized interactive pet, programmed entirely in C++ using the ESP32-C3 micro.",
+    "images": ["astro-02.jpeg", "#"],
+    "tech": ["Flutter", "Dart", "REST API"],
+    "platforms": ["apple-ios", "android"],
+    "link": "https://github.com/nbakh16/career-portfolio-template",
+    "category": "Hobby"
+  },
+  {
+    "title": "Puzzle Game solver",
+    "description": "A custom Depth First Search algorithm implemented in C++ used to solve a popular mobile puzzle game, 'Block Fill'.",
+    "images": ["astro-02.jpeg", "#"],
+    "tech": ["Flutter", "Dart", "REST API"],
+    "platforms": ["apple-ios", "android"],
+    "link": "https://github.com/nbakh16/career-portfolio-template",
+    "category": "Hobby"
+  },
+  {
+    "title": "Modular Caster system for a Helicopter",
+    "description": "A custom Depth First Search algorithm implemented in C++ used to solve a popular mobile puzzle game, 'Block Fill'.",
+    "images": ["astro-02.jpeg", "#"],
+    "tech": ["Flutter", "Dart", "REST API"],
+    "platforms": ["apple-ios", "android"],
+    "link": "https://github.com/nbakh16/career-portfolio-template",
+    "category": "Hobby"
+  },
+  {
+    "title": "Mechanical Multi-tool Wallet",
+    "description": "A Sleek, 5mm thick wallet incorpirating a pocket knife, two bit drivers, and a fire starter.",
+    "images": ["astro-02.jpeg", "#"],
+    "tech": ["Flutter", "Dart", "REST API"],
+    "platforms": ["apple-ios", "android"],
+    "link": "https://github.com/nbakh16/career-portfolio-template",
+    "category": "Hobby"
+  },
+  {
+    "title": "Self watering Plant Pot",
+    "description": "A Planter able to store and provide two weeks worth of water using zero electronics.",
+    "images": ["astro-02.jpeg", "#"],
+    "tech": ["Flutter", "Dart", "REST API"],
+    "platforms": ["apple-ios", "android"],
+    "link": "https://github.com/nbakh16/career-portfolio-template",
+    "category": "Hobby"
+  },
+  {
+    "title": "Heart rate monitor",
+    "description": "An IR based device that uses inteligent heuristic algorithms and a completely custom PCB to record and display heart rate in real time.",
+    "images": ["astro-02.jpeg", "#"],
+    "tech": ["Flutter", "Dart", "REST API"],
+    "platforms": ["apple-ios", "android"],
+    "link": "https://github.com/nbakh16/career-portfolio-template",
+    "category": "Hobby"
+  },
+  {
+    "title": "Camper Van",
+    "description": "A custom-built camper van designed for off-grid adventures. Featuring a full solar power system, water storage, and a transformable living space.",
+    "images": ["astro-02.jpeg", "#"],
+    "tech": ["Flutter", "Dart", "REST API"],
+    "platforms": ["apple-ios", "android"],
+    "link": "https://github.com/nbakh16/career-portfolio-template",
+    "category": "Hobby"
+  },
+  {
+    "title": "Robotic Butler",
+    "description": "My Final A-Level DT project, a fully functional small scale robot designed to deliver dishes in a resteraunt environment.",
     "images": ["astro-02.jpeg", "#"],
     "tech": ["Flutter", "Dart", "REST API"],
     "platforms": ["apple-ios", "android"],
