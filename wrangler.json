@@ -1,0 +1,10 @@
+{
+  "name": "judeotisme",
+  "compatibility_date": "2025-06-23",
+  "kv_namespaces": [
+    {
+      "binding": "SESSION",
+      "id": "adc578cf03974a9282acb597ef164226"
+    }
+  ]
+}
