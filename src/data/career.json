@@ -1,26 +1,35 @@
 [
   {
-    "company": "Demo Company",
-    "role": "Lead Software Engineer",
-    "period": "Oct 2025 - Present",
-    "type": "Full time job",
-    "description": "Leading cross-platform mobile development using Flutter and FastAPI. Focused on scalable system design and high-performance data processing.",
-    "skills": ["Leading", "Collaboration"]
-  },
-  {
-    "company": "Demo Company",
-    "role": "Full-stack Developer",
-    "period": "Sep 2023 - Sep 2025",
-    "type": "Full time job",
-    "description": "Specializing in Business Research Methods and Strategic HRM. Applying analytical frameworks to human capital management.",
-    "skills": ["React", "Node.js", "PostgreSQL", "Docker"]
-  },
-  {
     "company": "University of Glasgow",
     "role": "BEng in Mechatronic Engineering",
     "period": "Sep 2022 - Jul 2026",
     "type": "Student",
     "description": "One of two students to acheive a first-class honours degree in Mechatronic Engineering at a Russell Group university. Focused on robotics, control, and embedded systems.",
-    "skills": ["C++", "OOP", "Problem Solving"]
+    "skills": []
+  },
+  {
+    "company": "Jack Wimperis Lighting",
+    "role": "Lead Electronic and software Engineer",
+    "period": "Oct 2019 - Present",
+    "type": "Freelance",
+    "description": "Working with award winning artist Jack Wimperis bringing to life sculptural lighting installations. Responsible for the electronic design software control for events such as Glastonbury, Boomtown, Leeds light night, and more.",
+    "skills": ["Leadership", "Power Electronics", "TouchDesigner"]
+  },
+  {
+    "company": "Wake The Tiger",
+    "role": "Animatronic Engineer",
+    "period": "Jan 2022 - May 2022",
+    "type": "Freelance",
+    "description": "Designing and installing custom anamatronic systems for various rooms in Wake The Tiger Amazement park. Work included a custom motion controller board used to make self-typing typewriters, Analogue thunderstorm effects, and aninteractive time machine dashboard.",
+    "skills": ["Collaboration", "C++", "Robotics", "PCB Design"]
+  },
+  {
+    "company": "Cory Burr | Design Fabricators",
+    "role": "Electronics consultant",
+    "period": "Mar 2022 - May 2022",
+    "type": "Freelance",
+    "description": "Bought on to manufacture a completely custom wireless controller and motion driver for a client.",
+    "skills": ["C++", "Arduino", "Mechanical Design", "PCB Design", "Manufacture"]
   }
+  
 ]
