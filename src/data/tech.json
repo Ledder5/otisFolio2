@@ -3,14 +3,14 @@
     {
       "title": "Mechanical Design",
       "skills": [
-        { "name": "Fusion 360", "level": 3, "icon": "devicon:fusion" },
-        { "name": "Blender", "level": 2, "icon": "devicon:blender" }
+        { "name": "Fusion 360", "level": 3, "icon": "DeviconFusion" },
+        { "name": "Blender", "level": 2, "icon": "DeviconBlender" }
       ]
     },
     {
       "title": "Electrical Design",
       "skills": [
-        { "name": "Fusion 360", "level": 3, "icon": "devicon:fusion" },
+        { "name": "Fusion 360", "level": 3, "icon": "DeviconFusion" },
         { "name": "OrCAD", "level": 2, "icon": "OrCAD_Logo" },
         { "name": "KiCad", "level": 1, "icon": "KiCad_logo_square" }
       ]
@@ -18,10 +18,10 @@
     {
       "title": "Software Engineering",
       "skills": [
-        { "name": "C++", "level": 3, "icon": "devicon:cplusplus" },
-        { "name": "Python", "level": 2, "icon": "devicon:python" },
-        { "name": "MATLAB", "level": 3, "icon": "devicon:matlab" },
-        { "name": "Github", "level": 1, "icon": "devicon:github" }
+        { "name": "C++", "level": 3, "icon": "DeviconCplusplus" },
+        { "name": "Python", "level": 2, "icon": "DeviconPython" },
+        { "name": "MATLAB", "level": 3, "icon": "DeviconMatlab" },
+        { "name": "Github", "level": 1, "icon": "DeviconGithub" }
       ]
     },
     {
@@ -36,7 +36,7 @@
     {
       "title": "Micro-Controllers",
       "skills": [
-        { "name": "Arduino", "level": 3, "icon": "devicon:arduino" },
+        { "name": "Arduino", "level": 3, "icon": "DeviconArduino" },
         { "name": "ESP32", "level": 2, "icon": "Espressif_Standard_Logo_EN_Vertical" },
         { "name": "Teensy", "level": 3, "icon": "Teensy" },
         { "name": "STM32", "level": 1, "icon": "ST_logo_2020_blue_V" }
@@ -45,10 +45,10 @@
     {
       "title": "Graphic Design",
       "skills": [
-        { "name": "Inkscape", "level": 3, "icon": "devicon:inkscape" },
+        { "name": "Inkscape", "level": 3, "icon": "DeviconInkscape" },
         { "name": "Touch Designer", "level": 3, "icon": "TouchDesignerPlain2" },
-        { "name": "GIMP", "level": 2, "icon": "devicon:gimp" },
-        { "name": "Blender", "level": 2, "icon": "devicon:blender" },
+        { "name": "GIMP", "level": 2, "icon": "DeviconGimp" },
+        { "name": "Blender", "level": 2, "icon": "DeviconBlender" },
         { "name": "Concepts", "level": 3, "icon": "concepts" }
       ]
     }
