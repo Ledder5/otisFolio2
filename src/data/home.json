@@ -11,61 +11,61 @@
     {
       "name": "GitHub",
       "url": "https://github.com/[YOUR_USER_NAME]",
-      "icon": "mdi:github",
+      "icon": "DeviconGithub",
       "showInContact": true
     },
     {
       "name": "LinkedIn",
       "url": "https://linkedin.com/in/[YOUR_USER_NAME]",
-      "icon": "mdi:linkedin",
+      "icon": "MdiLinkedin",
       "showInContact": true
     },
     {
       "name": "Leetcode",
       "url": "#",
-      "icon": "devicon-plain:leetcode",
+      "icon": "MdiLinkedin",
       "showInContact": false
     },
     {
       "name": "Behance",
       "url": "#",
-      "icon": "devicon-plain:behance",
+      "icon": "MdiLinkedin",
       "showInContact": false
     },
     {
       "name": "Email",
       "url": "mailto:your-mail@example.com",
-      "icon": "mdi:email",
+      "icon": "MdiEmail",
       "showInContact": true
     },
     {
       "name": "Whatsapp",
       "url": "https://wa.me/[YOUR_WHATSAPP_NUMBER]",
-      "icon": "mdi:whatsapp",
+      "icon": "MdiWhatsapp",
       "showInContact": true
     },
     {
       "name": "Facebook",
       "url": "#",
-      "icon": "mdi:facebook",
+      "icon": "MdiLinkedin",
       "showInContact": false
     },
     {
       "name": "Messenger",
       "url": "#",
-      "icon": "mdi:facebook-messenger",
-      "showInContact": true
+      "icon": "MdiLinkedin",
+      "showInContact": false
     },
     {
       "name": "Instagram",
       "url": "#",
-      "icon": "mdi:instagram",
+      "icon": "MdiLinkedin",
       "showInContact": false
     },
     {
       "name": "Twitter",
       "url": "#",
-      "icon": "mdi:twitter",
+      "icon": "MdiLinkedin",
       "showInContact": false
     }
   ]

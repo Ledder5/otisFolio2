@@ -1,0 +1,25 @@
+---
+export interface Props {
+  name: string;
+  class?: string;
+}
+
+const { name, class: className } = Astro.props;
+
+// 1. Load all SVGs in the icons folder as raw text strings
+const icons = import.meta.glob('../icons/**/*.svg', { query: '?raw', import: 'default', eager: true });
+
+// 2. Match the requested icon name to the file
+let iconData = icons[`../icons/${name}.svg`] as string;
+
+if (!iconData) {
+  throw new Error(`Icon "${name}" not found in src/icons/`);
+}
+
+// 3. Inject any Tailwind classes directly into the SVG tag so your layouts don't break
+if (className) {
+  iconData = iconData.replace('<svg', `<svg class="${className}"`);
+}
+---
+
+<Fragment set:html={iconData} />

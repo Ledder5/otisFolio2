@@ -1,5 +1,5 @@
 ---
-import { Icon } from 'astro-icon/components';
+import Icon from '../components/Icon.astro';
 import ThemeToggle from './theme-toggle.astro';
 interface NavItem {
   label: string;
@@ -11,22 +11,22 @@ const navItems: NavItem[] = [
   {
     label: "Home",
     href: "#home",
-    icon: `mdi:home`,
+    icon: `MdiHome`,
   },
   {
     label: "Career",
     href: "#career",
-    icon: `mdi:work`,
+    icon: `MdiBriefcase`,
   },
   {
     label: "Projects",
     href: "#projects",
-    icon: `mdi:computer`,
+    icon: `MdiRobotIndustrial`,
   },
   {
     label: "Tech",
     href: "#tech",
-    icon: `mdi:code-tags`,
+    icon: `MdiSchool`,
   },
   // {
   //   label: "Education",
@@ -36,7 +36,7 @@ const navItems: NavItem[] = [
   {
     label: "Contact",
     href: "#contact",
-    icon: `mdi:message`,
+    icon: `MdiMessage`,
   }
 ];
 ---

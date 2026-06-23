@@ -1,5 +1,5 @@
 ---
-import { Icon } from 'astro-icon/components';
+import Icon from '../components/Icon.astro';
 const { project } = Astro.props;
 import { Image } from 'astro:assets';
 import { resolveAssetImage } from '../utils/images';
@@ -41,13 +41,15 @@ const isSlider = validImages.length > 1;
       }
     </div>
     
+    
     <div class="absolute top-3 right-3 flex gap-2 z-20">
       {project.platforms.map((p: string) => (
         <div class="p-1.5 bg-background backdrop-blur-md rounded-lg border border-accent/10 text-maintext">
-          <Icon name={`mdi:${p}`} class="w-4 h-4" />
+          <Icon name={`${p}`} class="w-4 h-4" />
         </div>
       ))}
     </div>
+    
   </div>
 
   <div class="p-6 space-y-4">

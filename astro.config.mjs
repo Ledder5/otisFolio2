@@ -1,8 +1,7 @@
 import { defineConfig } from 'astro/config';
 import cloudflare from '@astrojs/cloudflare';
-import { visualizer } from 'rollup-plugin-visualizer';
 import tailwindcss from '@tailwindcss/vite';
-import icon from 'astro-icon';
+import { visualizer } from 'rollup-plugin-visualizer';
 
 // https://astro.build/config
 export default defineConfig({
@@ -17,8 +16,6 @@ export default defineConfig({
       })
     ]
   },
-
-  integrations: [icon()],
 
   adapter: cloudflare(),
 
