@@ -16,11 +16,11 @@
     "skills": ["React", "Node.js", "PostgreSQL", "Docker"]
   },
   {
-    "company": "Demo University of Tech",
-    "role": "BSc in Computer Science",
-    "period": "Jun 2020 - Jun 2024",
+    "company": "University of Glasgow",
+    "role": "BEng in Mechatronic Engineering",
+    "period": "Sep 2022 - Jul 2026",
     "type": "Student",
-    "description": "Specializing in Business Research Methods and Strategic HRM. Applying analytical frameworks to human capital management.",
+    "description": "One of two students to acheive a first-class honours degree in Mechatronic Engineering at a Russell Group university. Focused on robotics, control, and embedded systems.",
     "skills": ["C++", "OOP", "Problem Solving"]
   }
 ]

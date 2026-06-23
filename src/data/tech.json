@@ -12,40 +12,41 @@
       "skills": [
         { "name": "Fusion 360", "level": 3, "icon": "devicon:fusion" },
         { "name": "OrCAD", "level": 2, "icon": "OrCAD_Logo" },
-        { "name": "KiCad", "level": 1, "icon": "skill-icons:css" }
+        { "name": "KiCad", "level": 1, "icon": "KiCad_logo_square" }
       ]
     },
     {
       "title": "Software Engineering",
       "skills": [
         { "name": "C++", "level": 3, "icon": "devicon:cplusplus" },
-        { "name": "Python", "level": 2, "icon": "skill-icons:python-dark" },
-        { "name": "MATLAB", "level": 3, "icon": "skill-icons:matlab-dark" },
-        { "name": "Github", "level": 1, "icon": "skill-icons:github-dark" }
+        { "name": "Python", "level": 2, "icon": "devicon:python" },
+        { "name": "MATLAB", "level": 3, "icon": "devicon:matlab" },
+        { "name": "Github", "level": 1, "icon": "devicon:github" }
       ]
     },
     {
       "title": "Manufacture",
       "skills": [
-        { "name": "3D Printing", "level": 3, "icon": "skill-icons:sqlite" },
-        { "name": "CNC Routing", "level": 2, "icon": "skill-icons:postgresql-dark" },
-        { "name": "PCB Routing", "level": 2, "icon": "skill-icons:postgresql-dark" },
-        { "name": "Laser Cutting", "level": 2, "icon": "skill-icons:postgresql-dark" }
+        { "name": "3D Printing", "level": 3, "icon": "MdiPrinter3dNozzle" },
+        { "name": "CNC Routing", "level": 2, "icon": "MaterialSymbolsToolsPowerDrill" },
+        { "name": "PCB Routing", "level": 2, "icon": "StreamlinePixelComputersDevicesElectronicsBoard" },
+        { "name": "Laser Cutting", "level": 2, "icon": "FluentLaserTool20Filled" }
       ]
     },
     {
       "title": "Micro-Controllers",
       "skills": [
         { "name": "Arduino", "level": 3, "icon": "devicon:arduino" },
-        { "name": "ESP32", "level": 2, "icon": "skill-icons:postgresql-dark" },
-        { "name": "Teensy", "level": 3, "icon": "skill-icons:postgresql-dark" },
-        { "name": "STM32", "level": 1, "icon": "skill-icons:postgresql-dark" }
+        { "name": "ESP32", "level": 2, "icon": "Espressif_Standard_Logo_EN_Vertical" },
+        { "name": "Teensy", "level": 3, "icon": "Teensy" },
+        { "name": "STM32", "level": 1, "icon": "ST_logo_2020_blue_V" }
       ]
     },
     {
       "title": "Graphic Design",
       "skills": [
         { "name": "Inkscape", "level": 3, "icon": "devicon:inkscape" },
+        { "name": "Touch Designer", "level": 3, "icon": "TouchDesignerPlain2" },
         { "name": "GIMP", "level": 2, "icon": "devicon:gimp" },
         { "name": "Blender", "level": 2, "icon": "devicon:blender" },
         { "name": "Concepts", "level": 3, "icon": "concepts" }
