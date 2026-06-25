@@ -1,6 +1,7 @@
 [
   {
     "title": "Daisy Chain Making Robot",
+    "slug": "Daisy",
     "description": "My final year project involving the design and implementation of a robot capable of creating daisy chains. This project received the highest possible grade and was highlighted by the University Of Glasgow at events and in media.",
     "images": ["astro-01.webp", "astro-02.jpeg"],
     "tech": ["Astro", "Tailwind"],

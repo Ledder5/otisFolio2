@@ -28,11 +28,6 @@ const navItems: NavItem[] = [
     href: "#career",
     icon: `MdiBriefcase`,
   },
-  // {
-  //   label: "Education",
-  //   href: "#contact",
-  //   icon: `mdi:message`,
-  // },
   {
     label: "Contact",
     href: "#contact",
@@ -252,20 +247,10 @@ const navItems: NavItem[] = [
       }
     } else {
       nav?.classList.remove("scrolling");
-      // nav?.style.setProperty("width", "80%");
     }
-    if (window.innerWidth < 768) {
-      // Small buffer (e.g. 10px) to prevent accidental hiding on "jittery" scrolls
-      if (currentScrollY > lastScrollY && currentScrollY > 50) {
-        // Scrolling Down - Hide Nav & theme-toggle
-        nav?.classList.add("nav-hidden");
-        themeWrapper?.classList.add("theme-hidden");
-      } else {
-        // Scrolling Up - Show Nav & theme-toggle
-        nav?.classList.remove("nav-hidden");
-        themeWrapper?.classList.remove("theme-hidden");
-      }
-    }
+
+    // The mobile scroll-to-hide logic that was here has been removed.
+    // The nav bar and theme toggle will now always stay visible.
 
     lastScrollY = currentScrollY;
     rafId = null;
