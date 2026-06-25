@@ -1,6 +1,14 @@
 ---
 import ProjectCard from './project-card.astro';
 import projectsData from '../data/projects.json';
+
+// --- CONFIGURATION ---
+const INITIAL_MOBILE = 3;   // Projects shown on mobile first load
+const INITIAL_DESKTOP = 6;  // Projects shown on desktop first load
+const LOAD_MORE_COUNT = 3;  // Projects to reveal per click
+
+const totalProjects = projectsData.length;
+const hasMoreMobile = totalProjects > INITIAL_MOBILE;
 ---
 
 <section id="projects" class="section-container overflow-hidden">
@@ -14,41 +22,105 @@ import projectsData from '../data/projects.json';
       </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {projectsData.map((project) => (
-        <ProjectCard project={project} />
-      ))}
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+      {projectsData.map((project, index) => {
+        
+        // Smart visibility logic mapping to Tailwind classes
+        let visibilityClass = '';
+        if (index >= INITIAL_DESKTOP) {
+          visibilityClass = 'hidden'; // Hidden everywhere initially
+        } else if (index >= INITIAL_MOBILE) {
+          visibilityClass = 'hidden md:block'; // Hidden on mobile, but visible on desktop
+        }
+
+        return (
+          <div class={`project-wrapper h-full ${visibilityClass}`}>
+            <ProjectCard project={project} />
+          </div>
+        )
+      })}
     </div>
+
+    {/* Conditionally render View More button */}
+    {hasMoreMobile && (
+      <div 
+        id="view-more-container" 
+        class={`mt-16 flex justify-center project-header ${totalProjects <= INITIAL_DESKTOP ? 'md:hidden' : ''}`}
+      >
+        <button 
+          id="view-more-btn" 
+          data-load={LOAD_MORE_COUNT}
+          class="group relative inline-flex items-center justify-center px-10 py-2 bg-white/5 border border-white/10 rounded-full text-maintext font-body transition-all duration-300 border-accent/50 bg-accent/10 shadow-[0_0_20px_rgba(var(--accent-rgb),0.3)] md:border-accent/50 md:bg-accent/10 md:shadow-none md:hover:border-accent/50 md:hover:bg-accent/10 md:hover:shadow-[0_0_20px_rgba(var(--accent-rgb),0.3)] hover:scale-105 cursor-pointer"
+        >
+          <div class="flex flex-col items-center justify-center text-center">
+            <span class="tracking-wide text-sm md:text-base font-medium transition-transform duration-300 md:translate-y-2 md:group-hover:translate-y-0">
+              View More Projects
+            </span>
+            
+            <span class="text-[10px] text-subtext font-light whitespace-nowrap transition-all duration-300 
+                         /* Mobile: Always visible */
+                         opacity-100 translate-y-0 
+                         /* Desktop: Hidden until hover */
+                         md:opacity-0 md:translate-y-1 md:group-hover:opacity-100 md:group-hover:translate-y-0">
+              Reveals hidden items
+            </span>
+          </div>
+          
+          <div class="absolute inset-0 rounded-full blur-md bg-accent/20 -z-10 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500"></div>
+        </button>
+      </div>
+    )}
   </div>
 </section>
 
-
 <style>
-  /* Header Initial State */
+  /* Header & Button Initial State */
   .project-header {
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
-  /* Cards Initial State */
-  .project-card {
-    opacity: 0; /* Ensuring cards start hidden too */
-    transform: translateY(20px) scale(0.95);
-    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-
   /* Shared Revealed State */
-  .project-header.reveal,
-  .project-card.reveal {
+  .project-header.reveal {
     opacity: 1 !important;
-    transform: translateY(0) scale(1);
+    transform: translateY(0) scale(1) !important;
   }
 </style>
 
 <script>
   const initProjectReveal = () => {
-    const header = document.querySelector('.project-header');
+    // 1. --- VIEW MORE BUTTON LOGIC ---
+    const btn = document.getElementById('view-more-btn');
+    const container = document.getElementById('view-more-container');
+    
+    if (btn && container) {
+      btn.addEventListener('click', () => {
+        const loadCount = parseInt(btn.getAttribute('data-load') || '3');
+        const allWrappers = document.querySelectorAll('.project-wrapper');
+        let revealed = 0;
+        
+        for (const wrapper of allWrappers) {
+          // We check the computed style to see if the browser is currently hiding it.
+          // This makes the logic bulletproof whether the user is currently on mobile or desktop!
+          if (window.getComputedStyle(wrapper).display === 'none') {
+            wrapper.classList.remove('hidden', 'md:block');
+            revealed++;
+            
+            if (revealed >= loadCount) break;
+          }
+        }
+
+        // Check if there are any projects left to reveal
+        const stillHidden = Array.from(allWrappers).some(w => window.getComputedStyle(w).display === 'none');
+        if (!stillHidden) {
+          container.style.display = 'none'; // Permanently hide the button
+        }
+      });
+    }
+
+    // 2. --- ANIMATION OBSERVER LOGIC ---
+    const headers = document.querySelectorAll('.project-header');
     const cards = document.querySelectorAll('.project-card');
     
     const observer = new IntersectionObserver((entries) => {
@@ -56,16 +128,14 @@ import projectsData from '../data/projects.json';
         if (entry.isIntersecting) {
           const target = entry.target as HTMLElement;
           
-          // Check if the intersecting element is the header
           if (target.classList.contains('project-header')) {
             target.classList.add('reveal');
             observer.unobserve(target);
           } 
-          // Check if the intersecting element is a project card
           else if (target.classList.contains('project-card')) {
             const index = Array.from(cards).indexOf(target);
             
-            // Stagger effect based on row position (only for cards)
+            // Stagger effect based on row position
             setTimeout(() => {
               target.classList.add('reveal');
             }, (index % 3) * 150);
@@ -79,13 +149,12 @@ import projectsData from '../data/projects.json';
       rootMargin: '0px 0px -10px 0px' 
     });
 
-    // Observe the header
-    if (header) observer.observe(header);
-    
-    // Observe all cards
+    // Observe headers and all cards
+    headers.forEach(header => observer.observe(header));
     cards.forEach(card => observer.observe(card));
   };
 
+  // Run on initial load
   window.addEventListener('load', initProjectReveal);
 
   // Support for Astro View Transitions

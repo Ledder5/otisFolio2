@@ -12,100 +12,163 @@ const optimizedImages = await Promise.all(
 );
 
 const validImages = optimizedImages.filter(Boolean);
-
 const isSlider = validImages.length > 1;
 ---
 
-<div class="project-card group relative bg-accent/5 border border-accent/10 rounded-2xl overflow-hidden hover:border-accent/40 transition-all duration-500">
-  <div class="aspect-video overflow-hidden relative bg-background/50">
-    <div class="absolute inset-0 bg-accent/10 group-hover:bg-transparent transition-colors z-10 pointer-events-none"></div>
-    
-    <div class={`w-full h-full relative ${isSlider ? 'image-slider' : ''}`}>
-      {
-        validImages.length > 0 ? (
-          validImages.map((imgMetadata, index) => (
-            <Image
-              src={imgMetadata}
-              alt={`${project.title}`}
-              class={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 group-hover:scale-110 ${index === 0 ? "opacity-100 z-0" : "opacity-0 z-[-1]"}`}
-            />
-          ))
-        ) : (
-          /* Fallback box if array is empty or filenames are missing */
-          <img
-            src="/placeholder.jpeg"
-            alt={`${project.title} placeholder`}
-            class="absolute inset-0 w-full h-full object-cover transition-all duration-1000 group-hover:scale-110"
+<div class="project-card relative w-full aspect-[4/3] sm:aspect-[16/10] rounded-2xl overflow-hidden group cursor-pointer border border-accent/10 hover:border-accent/40 transition-colors shadow-lg">
+
+  <div class={`absolute inset-0 z-0 bg-background/50 ${isSlider ? 'image-slider' : ''}`}>
+    {
+      validImages.length > 0 ? (
+        validImages.map((imgMetadata, index) => (
+          <Image
+            src={imgMetadata}
+            alt={`${project.title}`}
+            class={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 group-hover:scale-105 group-[.is-active]:scale-105 ${index === 0 ? "opacity-100 z-0" : "opacity-0 z-[-1]"}`}
           />
-        )
-      }
-    </div>
-    
-    
-    <div class="absolute top-3 right-3 flex gap-2 z-20">
-      {project.platforms.map((p: string) => (
-        <div class="p-1.5 bg-background backdrop-blur-md rounded-lg border border-accent/10 text-maintext">
-          <Icon name={`${p}`} class="w-4 h-4" />
-        </div>
-      ))}
-    </div>
-    
+        ))
+      ) : (
+        <img
+          src="/placeholder.jpeg"
+          alt={`${project.title} placeholder`}
+          class="absolute inset-0 w-full h-full object-cover transition-all duration-1000 group-hover:scale-105 group-[.is-active]:scale-105"
+        />
+      )
+    }
   </div>
 
-  <div class="p-6 space-y-4">
-    <div class="flex justify-between items-start">
+  <div class="absolute inset-x-0 bottom-0 h-3/4 bg-gradient-to-t from-background via-background/60 to-transparent opacity-100 group-hover:opacity-0 group-[.is-active]:opacity-0 transition-opacity duration-500 z-10 pointer-events-none"></div>
+
+  <div class="absolute inset-0 bg-background/90 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 group-[.is-active]:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
+
+  <div class="absolute inset-0 grid grid-rows-[1fr_auto_0fr] group-hover:grid-rows-[0fr_auto_1fr] group-[.is-active]:grid-rows-[0fr_auto_1fr] transition-[grid-template-rows] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] p-3 sm:p-3 z-20 pointer-events-none">
+
+    <div class="min-h-0"></div>
+
+    <div class="flex justify-between items-start min-h-0">
       <div>
-        <span class="text-accent text-[10px] uppercase tracking-widest font-bold">{project.category}</span>
-        <h3 class="text-xl font-heading font-bold text-maintext mt-1">{project.title}</h3>
+        <div class="h-4 overflow-hidden mb-1 sm:mb-2">
+          <span class="block text-accent text-[10px] sm:text-xs uppercase tracking-widest font-bold translate-y-4 group-hover:translate-y-0 group-[.is-active]:translate-y-0 opacity-0 group-hover:opacity-100 group-[.is-active]:opacity-100 transition-all duration-500">
+            {project.category}
+          </span>
+        </div>
+        
+        <h3 class="text-xl sm:text-2xl font-heading font-bold text-maintext tracking-tight leading-tight drop-shadow-md pr-4">{project.title}</h3>
       </div>
-      <a href={project.link} target="_blank" class="text-accent/75 hover:text-accent transition-colors">
-        <Icon name="MdiOpenInNew" class="w-6 h-6" />
+
+      <a href={project.link} target="_blank" aria-label={`View ${project.title}`} class="mt-1 opacity-0 group-hover:opacity-100 group-[.is-active]:opacity-100 text-accent/75 hover:text-accent transition-all duration-500 -translate-x-4 group-hover:translate-x-0 group-[.is-active]:translate-x-0 pointer-events-auto bg-accent/10 p-2 rounded-full hover:bg-accent/20 shrink-0">
+        <Icon name="MdiOpenInNew" class="w-5 h-5" />
       </a>
     </div>
 
-    <p class="text-subtext text-sm font-body line-clamp-3">
-      {project.description}
-    </p>
+    <div class="overflow-hidden min-h-0">
+      
+      <div class="h-full flex flex-col pt-3 sm:pt-4 opacity-0 group-hover:opacity-100 group-[.is-active]:opacity-100 transition-opacity duration-500 delay-100">
+        
+        <div class="flex-1 min-h-0">
+          <p class="text-subtext text-sm font-body line-clamp-2 sm:line-clamp-4">
+            {project.description}
+          </p>
+        </div>
 
-    <div class="flex flex-wrap gap-2 pt-2">
-      {project.tech.map((t: string) => (
-        <span class="rounded-md text-[10px] px-2 md:px-4 py-1 bg-accent/5 border border-accent/10 text-accent/80  group-hover:border-accent/40 group-hover:text-accent">
-          {t}
-        </span>
-      ))}
+        <div class="mt-auto shrink-0 flex flex-wrap gap-2 pt-3 pb-1">
+          {project.tech.map((t: string) => (
+            <span class="rounded-md text-[11px] px-3 py-1 bg-accent/10 border border-accent/20 text-accent group-hover:border-accent/40 transition-colors">
+              {t}
+            </span>
+          ))}
+        </div>
+
+      </div>
     </div>
+
   </div>
 </div>
 
 <script>
+  // --- Initialize Image Crossfade Sliders ---
   function initSliders() {
     const sliders = document.querySelectorAll('.image-slider');
-    
     sliders.forEach(slider => {
       const images = slider.querySelectorAll('img');
       if (images.length <= 1) return;
 
       let currentIndex = 0;
-      setInterval(() => {
-        // Hide current
+      const existingInterval = slider.getAttribute('data-interval');
+      if (existingInterval) clearInterval(parseInt(existingInterval));
+
+      const intervalId = setInterval(() => {
         images[currentIndex].classList.remove('opacity-100', 'z-0');
         images[currentIndex].classList.add('opacity-0', 'z-[-1]');
-        
-        // Move to next
         currentIndex = (currentIndex + 1) % images.length;
-        
-        // Show next
         images[currentIndex].classList.remove('opacity-0', 'z-[-1]');
         images[currentIndex].classList.add('opacity-100', 'z-0');
       }, 3500);
+
+      slider.setAttribute('data-interval', intervalId.toString());
     });
   }
 
-  initSliders();
-  document.addEventListener('astro:after-swap', initSliders);
+  // --- Bulletproof Interaction Logic ---
+  function initInteraction() {
+    const cards = document.querySelectorAll('.project-card');
+    
+    // 1. Set up a flag to track if the user has actually used the touch screen
+    let isTouchDevice = false;
+    window.addEventListener('touchstart', () => {
+      isTouchDevice = true;
+    }, { once: true, passive: true }); // Only needs to fire once!
+
+    cards.forEach(card => {
+      // 2. Manual Mouse Hover (Bypasses CSS restrictions)
+      card.addEventListener('mouseenter', () => {
+        if (!isTouchDevice) card.classList.add('is-active');
+      });
+
+      card.addEventListener('mouseleave', () => {
+        if (!isTouchDevice) card.classList.remove('is-active');
+      });
+
+      // 3. Touch / Click Logic
+      card.addEventListener('click', (e) => {
+        // Always let the external link work
+        if ((e.target as HTMLElement).closest('a')) return;
+
+        // If they have touched the screen, switch to tap-to-open logic
+        if (isTouchDevice) {
+          const wasActive = card.classList.contains('is-active');
+          
+          // Close all cards first
+          document.querySelectorAll('.project-card').forEach(c => c.classList.remove('is-active'));
+          
+          // If it wasn't already open, open it
+          if (!wasActive) card.classList.add('is-active');
+        }
+      });
+    });
+
+    // 4. Tap outside to close (Only applies to touch mode)
+    document.addEventListener('click', (e) => {
+      if (isTouchDevice && !(e.target as HTMLElement).closest('.project-card')) {
+        document.querySelectorAll('.project-card').forEach(c => c.classList.remove('is-active'));
+      }
+    });
+  }
+
+  function initAll() {
+    initSliders();
+    initInteraction();
+  }
+
+  // Run on initial load
+  initAll();
+  
+  // Run on Astro view transitions
+  document.addEventListener('astro:after-swap', initAll);
 </script>
 
 <style is:global>
+  /* Retains the intersection observer animation from the previous file */
   .project-card {
     opacity: 0;
     visibility: hidden;
