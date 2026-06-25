@@ -111,6 +111,96 @@
     --color-textrain: #e2a787;
   }
 
+  /* Vibrant Blaze - Dark */
+  [data-theme="blaze-dark"] {
+    --color-background: #140804;
+    --color-accent: #FF4F09;
+    --color-maintext: #FFF0E6;
+    --color-subtext: #d1bbae;
+    --color-textrain: #805c4d;
+  }
+
+  /* Vibrant Blaze - Light */
+  [data-theme="blaze-light"] {
+    --color-background: #FFF5F0;
+    --color-accent: #E04000; /* Slightly deeper for light background contrast */
+    --color-maintext: #2A1108;
+    --color-subtext: #6b5348;
+    --color-textrain: #e0bbae;
+  }
+
+  /* Digital Mint - Dark */
+  [data-theme="mint-dark"] {
+    --color-background: #061210;
+    --color-accent: #18D5AC;
+    --color-maintext: #E6FAF5;
+    --color-subtext: #a3c9c0;
+    --color-textrain: #4b7a70;
+  }
+
+  /* Digital Mint - Light */
+  [data-theme="mint-light"] {
+    --color-background: #F0FDF9;
+    --color-accent: #0F997A; /* Deepened teal for better legibility */
+    --color-maintext: #082B24;
+    --color-subtext: #51756d;
+    --color-textrain: #9fdfce;
+  }
+
+  /* Solar Flare - Dark */
+  [data-theme="solar-dark"] {
+    --color-background: #140F05;
+    --color-accent: #FF9B19;
+    --color-maintext: #FFF9ED;
+    --color-subtext: #c4b49d;
+    --color-textrain: #7d6e57;
+  }
+
+  /* Solar Flare - Light */
+  [data-theme="solar-light"] {
+    --color-background: #FFFAF0;
+    --color-accent: #D97A0C; /* Richer golden-orange for contrast */
+    --color-maintext: #2B1D0A;
+    --color-subtext: #73614b;
+    --color-textrain: #e6cdaa;
+  }
+
+  /* Pure Monochrome - Dark */
+  [data-theme="monochrome-dark"] {
+    --color-background: #111111;
+    --color-accent: #FFFFFF; /* Stark white as the accent */
+    --color-maintext: #E5E5E5;
+    --color-subtext: #a3a3a3;
+    --color-textrain: #525252;
+  }
+
+  /* Pure Monochrome - Light */
+  [data-theme="monochrome-light"] {
+    --color-background: #FFFFFF;
+    --color-accent: #000000; /* Stark black as the accent */
+    --color-maintext: #171717;
+    --color-subtext: #525252;
+    --color-textrain: #d4d4d4;
+  }
+
+  /* Quantum Cyan - Dark */
+  [data-theme="quantum-dark"] {
+    --color-background: #08161A;
+    --color-accent: #1CC3D9;
+    --color-maintext: #EAF8FA;
+    --color-subtext: #9bb6ba;
+    --color-textrain: #4a6d73;
+  }
+
+  /* Quantum Cyan - Light */
+  [data-theme="quantum-light"] {
+    --color-background: #F2FBFC;
+    --color-accent: #1091A3; /* Deepened cyan for light background contrast */
+    --color-maintext: #0A2329;
+    --color-subtext: #547278;
+    --color-textrain: #9ac0c7;
+  }
+
 
   /* Core Element Styles */
   *::selection {
