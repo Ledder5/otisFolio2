@@ -125,5 +125,14 @@
     "platforms": ["MdiStar"],
     "link": "https://github.com/nbakh16/career-portfolio-template",
     "category": "Hobby"
+  },
+  {
+    "title": "Evolutional Gearbox Generator",
+    "description": "Originaly programmed for the mechanical sinosoid generator, this programme uses an evelutional algorithm to generate gearboxes with very specific ratios. This unique aproach allows the user to weigh objectives such as gear sizes, co-primes, number of stages, and target overall ratio to identify all possible gearboxes and their rankings.",
+    "images": ["astro-02.jpeg"],
+    "tech": ["Python", "Dart", "REST API"],
+    "platforms": ["MdiStar"],
+    "link": "https://github.com/nbakh16/career-portfolio-template",
+    "category": "Hobby"
   }
 ]
