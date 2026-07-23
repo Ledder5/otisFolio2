@@ -12,7 +12,7 @@
   {
     "title": "NFC Record Player",
     "description": "An record stand that scans NFC tags and communicates with the spotify API in order to play the coresponding albums on your devices.",
-    "images": ["astro-02.jpeg"],
+    "images": ["RecordWide.jpg", "RecordHero.jpg"],
     "tech": ["Flutter", "Dart", "REST API"],
     "platforms": ["MdiStar"],
     "link": "https://github.com/nbakh16/career-portfolio-template",
