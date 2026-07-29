@@ -111,7 +111,7 @@
   {
     "title": "Camper Van",
     "description": "A custom-built camper van designed for off-grid adventures. Featuring a full solar power system, water storage, and a transformable living space.",
-    "images": ["VanLandscape.jpg", "VanSit.jpg", "VanLie.jpg"],
+    "images": ["VanLandscape.jpeg", "VanSit.jpg", "VanLie.jpg"],
     "tech": ["Flutter", "Dart", "REST API"],
     "platforms": ["MdiStar"],
     "link": "https://github.com/nbakh16/career-portfolio-template",

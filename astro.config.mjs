@@ -2,11 +2,15 @@ import { defineConfig } from 'astro/config';
 import cloudflare from '@astrojs/cloudflare';
 import tailwindcss from '@tailwindcss/vite';
 import { visualizer } from 'rollup-plugin-visualizer';
+import mdx from '@astrojs/mdx';
 
 // https://astro.build/config
 export default defineConfig({
   // site: '#',
   // base: '/',
+  
+  integrations: [mdx()], 
+
   vite: {
     plugins: [
       tailwindcss(),

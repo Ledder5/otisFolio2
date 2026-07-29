@@ -1,0 +1,30 @@
+import ProjectButton from '../components/ProjectButton.astro';
+import YouTube from '../components/YouTube.astro';
+
+## The Problem
+Standard markdown is great, but we needed a way to embed rich interactive elements directly into the case study. By utilizing MDX, we can combine regular formatted text with our custom Astro components!
+
+Here is an image using standard markdown syntax:
+![Project Architecture](/images/architecture-diagram.png)
+
+## The Solution
+We built a custom component library. Here is a demonstration video:
+
+<YouTube id="dQw4w9WgXcQ" />
+
+And you can review the technical documentation or view the live code below:
+
+<div class="flex flex-wrap gap-4">
+  <ProjectButton 
+    href="/downloads/tech-spec.pdf" 
+    mainText="Download Specs" 
+    subText="PDF File (2.4MB)" 
+    download={true} 
+  />
+  
+  <ProjectButton 
+    href="https://github.com/your-username/repo" 
+    mainText="View Source" 
+    subText="Opens GitHub Repo" 
+  />
+</div>

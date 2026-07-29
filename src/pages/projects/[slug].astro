@@ -5,6 +5,8 @@ import Icon from '../../components/Icon.astro';
 import { Image } from 'astro:assets';
 import { resolveAssetImage } from '../../utils/images';
 
+export const prerender = true;
+
 // 1. Tell Astro which URLs to generate
 export async function getStaticPaths() {
   return projectsData
@@ -20,15 +22,27 @@ const { slug } = Astro.params;
 // 3. Find the exact project in our JSON file that matches this slug
 const project = projectsData.find((p) => p.slug === slug);
 
-// 4. Safety Check: If no project is found (bad URL), redirect back home
+// 4. Safety Check
 if (!project) {
   return Astro.redirect('/#projects');
 }
 
-// 5. Resolve the hero image safely now that we guarantee 'project' exists
+// 5. Resolve the hero image safely
 const heroImageMetadata = project.images && project.images.length > 0
   ? await resolveAssetImage(project.images[0])
   : null;
+
+// 6. DYNAMICALLY LOAD THE MATCHING MDX FILE
+// This grabs all .mdx files in the content-projects folder
+const mdxFiles = import.meta.glob('../../content-projects/*.mdx');
+const postPath = `../../content-projects/${slug}.mdx`;
+
+let Content = null;
+if (mdxFiles[postPath]) {
+  // If a file matching the slug exists, compile it!
+  const post: any = await mdxFiles[postPath]();
+  Content = post.default;
+}
 ---
 
 <Layout title={`${project.title} | Portfolio`}>
@@ -67,6 +81,7 @@ const heroImageMetadata = project.images && project.images.length > 0
       </div>
     )}
 
+    <!-- RENDER THE MDX CONTENT HERE -->
     <article class="prose prose-invert prose-p:text-subtext prose-p:font-body prose-p:leading-relaxed prose-headings:font-heading prose-headings:text-maintext prose-a:text-accent hover:prose-a:text-accent/80 max-w-none">
       
       <p class="text-xl sm:text-2xl text-maintext/90 font-light mb-12 leading-relaxed">
@@ -75,21 +90,12 @@ const heroImageMetadata = project.images && project.images.length > 0
       
       <div class="h-px w-full bg-gradient-to-r from-accent/0 via-accent/20 to-accent/0 mb-12"></div>
 
-      <h2 class="text-2xl font-bold mb-4">About the Project</h2>
-      <p>
-        This is a placeholder for your dedicated project write-up. Right now, this is hardcoded text in the <code>[slug].astro</code> file. 
-      </p>
-      <p>
-        In the future, we can upgrade this by adding a <code>long_description</code> to your JSON file, or even swapping out JSON entirely in favor of <strong>Astro Content Collections (Markdown files)</strong> for a true blogging experience!
-      </p>
-
-      {project.link && (
-        <div class="mt-16">
-          <a href={project.link} target="_blank" class="no-underline inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-accent text-background font-heading font-bold hover:bg-accent/90 transition-all hover:-translate-y-1 shadow-lg shadow-accent/20">
-            Visit Live Project <Icon name="MdiOpenInNew" class="w-5 h-5" />
-          </a>
-        </div>
+      {Content ? (
+        <Content />
+      ) : (
+        <p class="italic text-subtext/50">Detailed case study coming soon...</p>
       )}
+
     </article>
 
   </main>
