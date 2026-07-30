@@ -38,7 +38,7 @@
   {
     "title": "Lactolight Reactive Wall",
     "description": "In colaboration with Jack Wimperis, lactolight is a led screen made entirely from recycled milk cartons. It uses a kinect depth camera to capture the audience and react to their movement with unique 4 effects.",
-    "images": [],
+    "images": ["LactoFire.jpg", "LactoDraw.jpg", "LactoRainbow.jpg"],
     "tech": ["Electronics", "Touch Designer"],
     "platforms": ["MdiStar"],
     "link": "https://github.com/nbakh16/career-portfolio-template",
@@ -92,25 +92,16 @@
   {
     "title": "Multi-tool Wallet",
     "description": "A Sleek, 5mm thick wallet incorpirating a pocket knife, two bit drivers, and a fire starter.",
-    "images": ["astro-02.jpeg"],
+    "images": ["WalletExplode.png", "WalletRender.png"],
     "tech": ["Mechanics"],
     "platforms": ["MdiStar"],
     "link": "https://github.com/nbakh16/career-portfolio-template",
     "category": "Personal"
   },
   {
-    "title": "Self watering Plant Pot",
-    "description": "A Planter able to store and provide two weeks worth of water using zero electronics.",
-    "images": ["astro-02.jpeg"],
-    "tech": ["Mechanics"],
-    "platforms": ["MdiStar"],
-    "link": "https://github.com/nbakh16/career-portfolio-template",
-    "category": "High School Project"
-  },
-  {
     "title": "Heart rate monitor",
     "description": "An IR based device that uses inteligent heuristic algorithms and a completely custom PCB to record and display heart rate in real time.",
-    "images": ["astro-02.jpeg"],
+    "images": ["HeartratePcb.png", "HeartrateSignal.png"],
     "tech": ["Electronics", "Python", "C++", "STM32"],
     "platforms": ["MdiStar"],
     "link": "https://github.com/nbakh16/career-portfolio-template",
@@ -128,7 +119,7 @@
   {
     "title": "Robotic Butler",
     "description": "My Final A-Level DT project, a fully functional small scale robot designed to deliver dishes in a resteraunt environment.",
-    "images": ["astro-02.jpeg"],
+    "images": ["RobutlerHero.jpg", "RobutlerSkeleton.png"],
     "tech": ["Electronics", "Mechanics", "Robotics", "C++", "Arduino"],
     "platforms": ["MdiStar"],
     "link": "https://github.com/nbakh16/career-portfolio-template",
@@ -137,7 +128,7 @@
   {
     "title": "Evolutional Gearbox Generator",
     "description": "Originaly programmed for the mechanical sinosoid generator, this programme uses an evelutional algorithm to generate gearboxes with very specific ratios. This unique aproach allows the user to weigh objectives such as gear sizes, co-primes, number of stages, and target overall ratio to identify all possible gearboxes and their rankings.",
-    "images": ["astro-02.jpeg"],
+    "images": ["GearboxPopulation.png", "GearboxFitness.png", "GearboxResult.png"],
     "tech": ["Python"],
     "platforms": ["MdiStar"],
     "link": "https://github.com/nbakh16/career-portfolio-template",
@@ -146,7 +137,7 @@
   {
     "title": "Sculptural Led Crystals",
     "description": "In colaboration with Jack Wimperis for boomtown festival, we designed and built 10 towers ranging from 4 to 10 meters in height. These were covered in over 40 thousand individualy adressable leds which I mapped in 3d. This allowed me to controll this monolithic structure, displaying custom, reactive, real time rendered effects.",
-    "images": ["astro-02.jpeg"],
+    "images": ["CrystalTowerWhite.jpg", "CrystalTowerDay.png", "CrystalTowerCrowd.png"],
     "tech": ["Electronics", "Touch Designer"],
     "platforms": ["MdiStar"],
     "link": "https://github.com/nbakh16/career-portfolio-template",
@@ -155,7 +146,7 @@
   {
     "title": "Anamatronic Motion controller",
     "description": "While working for Wake The Tiger I had to animate many objects using a variety of sctuators. The motion controller is a standardised board I designed with the capability of driving steppers, dc motors, solenoids, leds, servos, and more. This was combined with a custom firmware that made it easy to drive any of these devices with an array of built in modes and let multiple boards comunicate with each other.",
-    "images": ["astro-02.jpeg"],
+    "images": ["MotionPcb.png", "MotionSch.png"],
     "tech": ["Electronics", "Robotics", "C++", "Arduino"],
     "platforms": ["MdiStar"],
     "link": "https://github.com/nbakh16/career-portfolio-template",
@@ -169,5 +160,14 @@
     "platforms": ["MdiStar"],
     "link": "https://github.com/nbakh16/career-portfolio-template",
     "category": "Freelance"
+  },
+  {
+    "title": "Machine Learning Prediction",
+    "description": "As part of a university cource in AI and machine learning I programmed and tuned a series of machine learning algorithms to predict the age of an abalone. Among the models investigated were, neural networks, decision trees, radial bias vector support vector machine, a number of linear regression models, and more.",
+    "images": ["MlMlpLayers.png", "MlMlp.png", "MlLinearRegression.png"],
+    "tech": ["Python"],
+    "platforms": ["MdiStar"],
+    "link": "https://github.com/nbakh16/career-portfolio-template",
+    "category": "University Project"
   }
 ]
