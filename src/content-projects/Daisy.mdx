@@ -1,40 +1,55 @@
-import ProjectButton from '../components/ProjectButton.astro';
 import YouTube from '../components/YouTube.astro';
+import ProjectButton from '../components/ProjectButton.astro';
 import { Image } from 'astro:assets';
-import Thumbnail from '../assets/DaisyThumbnail.png';
 import Hero from '../assets/DaisyHero.png';
+import Thumbnail from '../assets/DaisyThumbnail.png';
 
-<YouTube id="yBVF2Wa7vjM" />
+<YouTube id="lHv6UkHt_xA" />
 
-<div class="flex flex-wrap justify-center gap-4 sm:gap-6 my-10">
-  <ProjectButton 
-      href="/pdfs/DaisyChainingRobotReport.pdf" 
-      mainText="Download Report" 
-      subText="PDF File (14.1MB)" 
-      download={true} 
-  />
+<div class="flex flex-wrap justify-center gap-4 sm:gap-6 my-10"> 
+  <ProjectButton  
+      href="/pdfs/DaisyChainingRobotReport.pdf"  
+      mainText="Download Report"  
+      subText="PDF File (14.1MB)"  
+      download={true}  
+  /> 
 </div>
 
-## The Problem
-Standard markdown is great, but we needed a way to embed rich interactive elements directly into the case study. By utilizing MDX, we can combine regular formatted text with our custom Astro components!
+My final year project involved the design and implementation of a robot capable of creating daisy chains. This final thesis demonstrated my proficiency in all three pillars of robotics: electrical design, mechanical engineering, and computer science. This project earned an award from the Institute of Electronic Engineering for the best manufacturing project in the whole of the University of Glasgow.
 
-Here is an image using standard markdown syntax:
-
-<Image 
-  src={Hero} 
-  alt="A diagram showing the project architecture" 
-  class="w-full rounded-2xl border border-accent/20 shadow-lg my-8"
+<Image  
+  src={Hero}  
+  alt="The Daisy Chain Making Robot"  
+  class="w-full rounded-2xl border border-accent/20 shadow-lg my-8" 
 />
 
-## The Solution
-We built a custom component library. Here is a demonstration video:
+## Project Overview
 
-And you can review the technical documentation or view the live code below:
+Handling and processing flexible and organic objects is a complex task in robotics. This project aimed to automate the cyclical interweaving of daisies using a combination of custom hardware, electronics, and software. 
 
-<div class="flex flex-wrap justify-center gap-4 sm:gap-6 my-10">
-  <ProjectButton 
-    href="https://github.com/your-username/repo" 
-    mainText="View Source" 
-    subText="Opens GitHub Repo" 
-  />
-</div>
+### Hardware & Mechanics
+* **Gantries:** The robot utilizes two upright, core-XZ gantries facing each other based on the open-source Voron Switchwire design.
+* **Custom Grippers:** Two 4-DOF grippers act as the robot's hands. Each gripper features V-profile fingers that self-align the daisy stems to a precise location regardless of stem thickness. The grippers can also pinch and rotate to facilitate the threading process.
+* **Auxiliary Tools:** 
+  * **Conveyor:** Feeds daisies into the workspace using two mirrored timing belts.
+  * **Knife:** A static scalpel blade with a spring-loaded alignment guide reliably splits the daisy stems down the middle.
+  * **Shaft:** A custom carbon fiber tube and wire snare mechanism threads one daisy through the split stem of another.
+
+### Electronics
+* **Controllers:** The system is coordinated by a Raspberry Pi 5 single-board computer running inverse kinematics. This communicates with a BIGTREETECH Octopus V1.1 microcontroller for hardware interfacing.
+* **Actuators:** Motion is driven by NEMA 17 stepper motors for the gantries and conveyor. Micro servo motors (MG90S) are used for the grippers, and push/pull solenoids actuate the knife and shaft tools.
+* **Custom PCB:** A custom servo driver board was designed using SN7404 hex inverters. This boosts and inverts PWM signals to ensure reliable servo communication.
+
+### Software
+* **Control Firmware:** The robot runs on Klipper, an open-source firmware that offloads complex kinematic calculations to the Raspberry Pi.
+* **Custom Kinematics:** A custom Python class was written to support the dual core-XZ kinematics. This enables "hot-swapping" control between the two independent gantries within Klipper.
+* **Path Planning:** A bespoke Python script acts as a compiler. It converts plain English operational commands into standardized G-Code that the robot can execute.
+
+## Results
+The device successfully demonstrated the ability to process and chain delicate organics. Through iterative design and parameter tuning, the robot achieved an overall chaining success rate of 64.3% under optimal conditions (specifically with stems over 1.6mm thick). The project successfully fulfilled its requirements and won the IET manufacturing prize.
+
+<Image  
+  src={Thumbnail}  
+  alt="Thumbnail showing project details"  
+  class="w-full rounded-2xl border border-accent/20 shadow-lg my-8" 
+/>

@@ -1,0 +1,92 @@
+import ProjectButton from '../components/ProjectButton.astro';
+import YouTube from '../components/YouTube.astro';
+import { Image } from 'astro:assets';
+import Thumbnail from '../assets/DaisyThumbnail.png';
+import Hero from '../assets/DaisyHero.png';
+
+## Embed videos like this
+
+# In header import youtube component
+
+import YouTube from '../components/YouTube.astro';
+
+# In text display embed
+
+<YouTube id="lHv6UkHt_xA" />
+
+## Button to download pdf like this
+
+# In header import button component
+
+import ProjectButton from '../components/ProjectButton.astro';
+
+# In text add button
+
+<div class="flex flex-wrap justify-center gap-4 sm:gap-6 my-10">
+  <ProjectButton 
+      href="/pdfs/DaisyChainingRobotReport.pdf" 
+      mainText="Download Report" 
+      subText="PDF File (14.1MB)" 
+      download={true} 
+  />
+</div>
+
+## Button to go to website/ github like this
+
+# In header import button component
+
+import ProjectButton from '../components/ProjectButton.astro';
+
+# In text add button
+
+<div class="flex flex-wrap justify-center gap-4 sm:gap-6 my-10">
+  <ProjectButton 
+    href="https://github.com/your-username/repo" 
+    mainText="View Source" 
+    subText="Opens GitHub Repo" 
+  />
+</div>
+
+## Embed images like this
+
+# In header import image
+
+import { Image } from 'astro:assets';
+import Hero from '../assets/DaisyHero.png';
+
+# In text display image
+
+<Image 
+  src={Hero} 
+  alt="A diagram showing the project architecture" 
+  class="w-full rounded-2xl border border-accent/20 shadow-lg my-8"
+/>
+
+## Text
+standard markdown styling
+
+# H1
+## H2
+### H3
+
+**bold text**
+
+*italicized text*
+
+> blockquote
+
+1. First item
+2. Second item
+3. Third item
+   
+
+- First item
+- Second item
+- Third item
+
+`code`
+
+---
+
+[title](https://www.example.com)
+

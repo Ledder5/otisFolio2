@@ -1,0 +1,59 @@
+import ProjectButton from '../components/ProjectButton.astro';
+import { Image } from 'astro:assets';
+import CasterHero from '../assets/CasterHero.png';
+import CasterHeli from '../assets/CasterHeli.png';
+import CasterExploded from '../assets/CasterExploded.png';
+import CasterRender from '../assets/CasterRender.png';
+
+<div class="flex flex-wrap justify-center gap-4 sm:gap-6 my-10"> 
+  <ProjectButton  
+      href="/pdfs/ModularCasterDesignReport.pdf"  
+      mainText="Download Report"  
+      subText="PDF File"  
+      download={true}  
+  /> 
+</div> 
+
+A comprehensive, modular system for mounting and moving equipment in an air ambulance. This group project built on a solid foundation of market identification, stakeholder interviews, and standards research, resulted in a fully realized and documented mechanical design for a locking, modular caster. This model was then prototyped and presented, gaining the highest possible grade for the course.
+
+<Image  
+  src={CasterHero}  
+  alt="Hero render of the modular caster system"  
+  class="w-full rounded-2xl border border-accent/20 shadow-lg my-8" 
+/> 
+
+## Project Overview
+
+The objective of this university group project was to develop a safe and efficient method for maneuvering and securing medical equipment within the confined, high-stakes environment of an air ambulance. The development process was heavily grounded in upfront market identification, stakeholder interviews, and rigorous research into aerospace and medical industry standards.
+
+<Image  
+  src={CasterHeli}  
+  alt="Visual context of the caster system inside a helicopter"  
+  class="w-full rounded-2xl border border-accent/20 shadow-lg my-8" 
+/> 
+
+## Mechanical Design and Features
+
+The final output is a fully functional mechanical design tailored for aviation requirements.
+* **Modular Architecture:** The system utilizes a modular design, enabling it to be easily adapted or reconfigured for various types of medical equipment and mounting constraints.
+* **Locking Mechanism:** A core engineering focus was the development of a complex locking linkage. This linkage incorporates a physical safety lockout designed to securely anchor the caster during flight, preventing unintended movement during turbulence or high-G maneuvers.
+
+<Image  
+  src={CasterExploded}  
+  alt="Exploded diagram showing the internal mechanics and locking linkage"  
+  class="w-full rounded-2xl border border-accent/20 shadow-lg my-8" 
+/> 
+
+## Compliance and Safety
+
+Given the strict regulatory environment of aerospace engineering, the caster system was designed to be fully compliant with relevant aviation and medical standards. The mechanical integrity of the design was verified through extensive safety calculations and computational simulations to ensure it could withstand required operational loads and stress factors.
+
+## Manufacturing and Results
+
+Alongside the mechanical design and simulations, a full manufacturing plan was developed to outline how the system could be fabricated and assembled at scale. The design was subsequently prototyped and presented to a panel, where it achieved the highest possible grade for the course.
+
+<Image  
+  src={CasterRender}  
+  alt="Final clean render of the completed modular caster design"  
+  class="w-full rounded-2xl border border-accent/20 shadow-lg my-8" 
+/>
