@@ -17,7 +17,7 @@ const uniqueTechs = [...new Set(allTechs)].sort();
 
 <section id="projects" class="section-container overflow-hidden">
   <div class="container mx-auto">
-    <div class="mb-16 project-header">
+    <div class="mb-10 project-header">
       <h2 class="text-3xl md:text-4xl font-heading font-bold text-maintext mb-2 flex items-center gap-4">
           <span class="text-accent">/</span> Featured Projects
         </h2>
@@ -26,8 +26,26 @@ const uniqueTechs = [...new Set(allTechs)].sort();
       </p>
     </div>
 
+    {/* --- NEW FILTER BAR --- */}
+    <div class="mb-12 flex flex-wrap gap-2 md:gap-3 project-header">
+      <button 
+        class="filter-btn active-filter px-4 py-1.5 rounded-full text-xs font-body border border-accent/10 bg-transparent text-subtext transition-all hover:border-accent/40 hover:text-maintext cursor-pointer" 
+        data-tech="all"
+      >
+        All
+      </button>
+      {uniqueTechs.map(tech => (
+        <button 
+          class="filter-btn px-4 py-1.5 rounded-full text-xs font-body border border-accent/10 bg-transparent text-subtext transition-all hover:border-accent/40 hover:text-maintext cursor-pointer" 
+          data-tech={tech}
+        >
+          {tech}
+        </button>
+      ))}
+    </div>
+
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
-      {projectsData.map((project, index) => {
+      {projectsData.map((project: any, index) => {
         
         // Smart visibility logic mapping to Tailwind classes
         let visibilityClass = '';
@@ -37,8 +55,14 @@ const uniqueTechs = [...new Set(allTechs)].sort();
           visibilityClass = 'hidden md:block'; // Hidden on mobile, but visible on desktop
         }
 
+        const techString = project.tech ? project.tech.join(',') : '';
+
         return (
-          <div class={`project-wrapper h-full ${visibilityClass}`}>
+          <div 
+            class={`project-wrapper h-full ${visibilityClass}`}
+            data-initial-class={`project-wrapper h-full ${visibilityClass}`}
+            data-techs={techString}
+          >
             <ProjectCard project={project} />
           </div>
         )
@@ -90,6 +114,13 @@ const uniqueTechs = [...new Set(allTechs)].sort();
     opacity: 1 !important;
     transform: translateY(0) scale(1) !important;
   }
+
+  /* --- NEW ACTIVE FILTER STYLE --- */
+  .filter-btn.active-filter {
+    background-color: color-mix(in srgb, var(--color-accent) 15%, transparent) !important;
+    border-color: color-mix(in srgb, var(--color-accent) 40%, transparent) !important;
+    color: var(--color-accent) !important;
+  }
 </style>
 
 <script>
@@ -123,7 +154,50 @@ const uniqueTechs = [...new Set(allTechs)].sort();
       });
     }
 
-    // 2. --- ANIMATION OBSERVER LOGIC ---
+    // 2. --- FILTERING LOGIC ---
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const allWrappers = document.querySelectorAll('.project-wrapper');
+    const viewMoreContainer = document.getElementById('view-more-container');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Remove active class from all buttons, add to clicked button
+        filterBtns.forEach(b => b.classList.remove('active-filter'));
+        btn.classList.add('active-filter');
+
+        const selectedTech = btn.getAttribute('data-tech') || '';
+
+        allWrappers.forEach(wrapper => {
+          const projectTechs = (wrapper.getAttribute('data-techs') || '').split(',');
+          
+          if (selectedTech === 'all') {
+            // Restore exact original pagination classes
+            wrapper.className = wrapper.getAttribute('data-initial-class') || '';
+          } else {
+            // If filtering, remove hidden classes if it matches, otherwise hide it
+            if (projectTechs.includes(selectedTech)) {
+              wrapper.className = 'project-wrapper h-full'; 
+            } else {
+              wrapper.className = 'project-wrapper h-full hidden';
+            }
+          }
+        });
+
+        // Handle View More button visibility
+        if (viewMoreContainer) {
+          if (selectedTech === 'all') {
+            // If returning to "All", check if any projects are still naturally hidden
+            const stillHidden = Array.from(allWrappers).some(w => window.getComputedStyle(w).display === 'none');
+            viewMoreContainer.style.display = stillHidden ? 'flex' : 'none';
+          } else {
+            // Always hide "View More" when a specific filter is active
+            viewMoreContainer.style.display = 'none';
+          }
+        }
+      });
+    });
+
+    // 3. --- ANIMATION OBSERVER LOGIC ---
     const headers = document.querySelectorAll('.project-header');
     const cards = document.querySelectorAll('.project-card');
     
