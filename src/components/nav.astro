@@ -8,31 +8,11 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  {
-    label: "Home",
-    href: "#home",
-    icon: `MdiHome`,
-  },
-  {
-    label: "Projects",
-    href: "#projects",
-    icon: `MdiRobotIndustrial`,
-  },
-  {
-    label: "Skills",
-    href: "#tech",
-    icon: `MdiSchool`,
-  },
-  {
-    label: "Career",
-    href: "#career",
-    icon: `MdiBriefcase`,
-  },
-  {
-    label: "Contact",
-    href: "#contact",
-    icon: `MdiMessage`,
-  }
+  { label: "Home", href: "/#home", icon: `MdiHome` },
+  { label: "Projects", href: "/#projects", icon: `MdiRobotIndustrial` },
+  { label: "Skills", href: "/#tech", icon: `MdiSchool` },
+  { label: "Career", href: "/#career", icon: `MdiBriefcase` },
+  { label: "Contact", href: "/#contact", icon: `MdiMessage` }
 ];
 ---
 <div id="theme-toggle-wrapper" class="fixed top-4 right-4 z-50 md:top-4 md:right-4 reveal-content" style="animation-delay: 700ms;">
@@ -267,24 +247,38 @@ const navItems: NavItem[] = [
   );
 
   //smooth scrolling to a linked section
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  ///smooth scrolling to a linked section (only if on the home page)
+  document.querySelectorAll('nav a').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
-      e.preventDefault();
+      // Added the TypeScript assertion back in so it knows it's an anchor tag!
       const target = e.currentTarget as HTMLAnchorElement;
-      const targetId = target.getAttribute("href")?.substring(1) || "";
-      const targetElement = document.getElementById(targetId);
-      if (targetElement) {
-        targetElement.scrollIntoView({
-          behavior: "smooth",
-        });
+      
+      // Extra safety check to satisfy strict TypeScript rules
+      if (!target) return; 
+      
+      const href = target.getAttribute("href") || "";
+      
+      if (href.startsWith("/#") && window.location.pathname === "/") {
+        e.preventDefault();
+        const targetId = href.substring(2); 
+        const targetElement = document.getElementById(targetId);
+        
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: "smooth",
+          });
+          history.pushState(null, '', href); 
+        }
       }
     });
   });
 
   //highlight section by observing visible one on the screen by 50%
+  //highlight section by observing visible one on the screen by 50%
   document.addEventListener("DOMContentLoaded", () => {
     const sections = document.querySelectorAll("section[id]");
-    const navLinks = document.querySelectorAll("nav a[href^='#']");
+    // UPDATE: Now looking for /# instead of just #
+    const navLinks = document.querySelectorAll("nav a[href^='/#']"); 
     const observerOptions = { threshold: 0.5 };
 
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
@@ -292,7 +286,8 @@ const navItems: NavItem[] = [
         if (entry.isIntersecting) {
           navLinks.forEach((link) => link.classList.remove("active"));
           const id = entry.target.getAttribute("id");
-          const activeLink = document.querySelector(`nav a[href="#${id}"]`);
+          // UPDATE: Now looking for /#id instead of just #id
+          const activeLink = document.querySelector(`nav a[href="/#${id}"]`); 
           if (activeLink) {
             activeLink.classList.add("active");
           }

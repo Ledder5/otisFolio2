@@ -1,7 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/nav.astro';
 import projectsData from '../../data/projects.json';
 import { resolveAssetImage } from '../../utils/images';
+import Icon from '../../components/Icon.astro';
 
 export const prerender = true;
 
@@ -39,6 +41,8 @@ if (mdxFiles[postPath]) {
 ---
 
 <Layout title={`${project.title} | Portfolio`}>
+
+  <Nav />
   
   <div class="pt-24 pb-20 w-full mx-auto relative z-10">
     
@@ -65,10 +69,35 @@ if (mdxFiles[postPath]) {
     </header>
 
     <!-- RENDER THE MDX CONTENT HERE -->
-    <article class="prose prose-invert prose-p:text-subtext prose-p:font-body prose-p:leading-relaxed prose-headings:font-heading prose-headings:text-maintext prose-a:text-accent hover:prose-a:text-accent/80 max-w-none">
+    <article class="
+      prose prose-invert max-w-none
       
-      <div class="h-px w-full bg-gradient-to-r from-accent/0 via-accent/20 to-accent/0 mb-12"></div>
-
+      /* Paragraphs */
+      prose-p:text-subtext prose-p:font-body prose-p:leading-relaxed
+      
+      /* Headings */
+      prose-headings:font-heading prose-headings:text-maintext prose-headings:font-bold
+      prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-6
+      prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-4
+      
+      /* Links */
+      prose-a:text-accent prose-a:no-underline hover:prose-a:text-accent/80 hover:prose-a:underline
+      
+      /* Lists */
+      prose-ul:text-subtext prose-ul:list-disc prose-ul:pl-6
+      prose-ol:text-subtext prose-ol:list-decimal prose-ol:pl-6
+      prose-li:marker:text-accent
+      
+      /* Bold & Italics */
+      prose-strong:text-maintext prose-strong:font-bold
+      
+      /* Blockquotes */
+      prose-blockquote:border-l-accent prose-blockquote:bg-accent/5 prose-blockquote:py-1 prose-blockquote:px-4 prose-blockquote:rounded-r-lg prose-blockquote:text-subtext prose-blockquote:not-italic
+      
+      /* Images (removes default margin if you want to control it via components) */
+      prose-img:my-0 prose-img:rounded-2xl
+    ">
+      
       {Content ? (
         <Content />
       ) : (

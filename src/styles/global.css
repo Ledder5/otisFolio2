@@ -1,6 +1,9 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 @import '@fontsource-variable/space-grotesk';
 @import '@fontsource-variable/inter';
+
+/* ... the rest of your custom css ... */
 
 @theme {
   /* Base Colors - Theme used in @layer base{...} */
