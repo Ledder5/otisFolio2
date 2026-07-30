@@ -2,6 +2,18 @@ import ProjectButton from '../components/ProjectButton.astro';
 import YouTube from '../components/YouTube.astro';
 import { Image } from 'astro:assets';
 import Thumbnail from '../assets/DaisyThumbnail.png';
+import Hero from '../assets/DaisyHero.png';
+
+<YouTube id="yBVF2Wa7vjM" />
+
+<div class="flex flex-wrap justify-center gap-4 sm:gap-6 my-10">
+  <ProjectButton 
+      href="/pdfs/DaisyChainingRobotReport.pdf" 
+      mainText="Download Report" 
+      subText="PDF File (14.1MB)" 
+      download={true} 
+  />
+</div>
 
 ## The Problem
 Standard markdown is great, but we needed a way to embed rich interactive elements directly into the case study. By utilizing MDX, we can combine regular formatted text with our custom Astro components!
@@ -9,7 +21,7 @@ Standard markdown is great, but we needed a way to embed rich interactive elemen
 Here is an image using standard markdown syntax:
 
 <Image 
-  src={Thumbnail} 
+  src={Hero} 
   alt="A diagram showing the project architecture" 
   class="w-full rounded-2xl border border-accent/20 shadow-lg my-8"
 />
@@ -17,18 +29,9 @@ Here is an image using standard markdown syntax:
 ## The Solution
 We built a custom component library. Here is a demonstration video:
 
-<YouTube id="dQw4w9WgXcQ" />
-
 And you can review the technical documentation or view the live code below:
 
-<div class="flex flex-wrap gap-4">
-  <ProjectButton 
-    href="/downloads/tech-spec.pdf" 
-    mainText="Download Specs" 
-    subText="PDF File (2.4MB)" 
-    download={true} 
-  />
-  
+<div class="flex flex-wrap justify-center gap-4 sm:gap-6 my-10">
   <ProjectButton 
     href="https://github.com/your-username/repo" 
     mainText="View Source" 

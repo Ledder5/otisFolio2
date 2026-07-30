@@ -4,25 +4,34 @@
     "slug": "Daisy",
     "description": "My final year project involving the design and implementation of a robot capable of creating daisy chains. This final thesis demonstrated my proficiency in all thre pillars of robotics, electrical design, mechanical engineering, and computer science. This project earned an award from the Instiute of Electronic Engineering for the best manufacturing project in the whole of the University of Glasgow.",
     "images": ["DaisyThumbnail.png", "DaisyHero.png"],
-    "tech": ["Astro", "Tailwind"],
+    "tech": ["Electronics", "Mechanics", "Robotics", "Python"],
     "platforms": ["MdiStar"],
     "link": "https://astro.build/themes/details/career-portfolio-data-driven-astro-ssg/",
+    "category": "University Project"
+  },
+  {
+    "title": "Modular Caster system for a Helicopter",
+    "description": "A comprehensive, modular system for mounting and moving equiptment in a air ambulance. This group project built on a solid foundation of market identification, stakeholder interviews, and standards research, resulted in a rully realised and documented mechanical design for locking, modular, caster. This model was then prototyped and presented, gaining the highest possible grade for the cource.",
+    "images": ["CasterHero.png", "CasterHeli.png", "CasterExploded.png", "CasterRender.png"],
+    "tech": ["Mechanics"],
+    "platforms": ["MdiStar"],
+    "link": "https://github.com/nbakh16/career-portfolio-template",
     "category": "University Project"
   },
   {
     "title": "NFC Record Player",
     "description": "An record stand that scans NFC tags and communicates with the spotify API in order to play the coresponding albums on your devices.",
     "images": ["RecordWide.jpg", "RecordHero.jpg"],
-    "tech": ["Flutter", "Dart", "REST API"],
+    "tech": ["Electronics", "C++", "ESP32"],
     "platforms": ["MdiStar"],
     "link": "https://github.com/nbakh16/career-portfolio-template",
-    "category": "Hobby"
+    "category": "Personal"
   },
   {
     "title": "Buckets and Buckets of Light",
     "description": "In colaboration with Jack Wimperis, we designed and built a 6 x 4 x 100 pixel LED Matrix with a fully 3d and reactive programme developed by me in TouchDesigner. This sculpture was displayed at the award winning 'Leeds Light Night' in 2025. For this project I also made a fully punctional scale replica of the sculpture for programme development and marketing.",
     "images": ["BucketWide.jpg", "BucketClose.jpg", "BucketMid.jpg"],
-    "tech": ["Flutter", "Dart", "REST API"],
+    "tech": ["Electronics", "Touch Designer"],
     "platforms": ["MdiStar"],
     "link": "https://github.com/nbakh16/career-portfolio-template",
     "category": "Freelance"
@@ -31,70 +40,61 @@
     "title": "Crystal Lamps",
     "description": "Crystal inspired lamp with touch responsive controlls and custom effects. 100 adressable leds light up the gemoetric, mirrored interior of a crystal with mesmorising effects. The colour, speed, and brightness are controllable for all 4 of the lamps generative lighting effects.",
     "images": ["CrystalLampLit.jpg", "CrystalLampOutside.jpg"],
-    "tech": ["Flutter", "Dart", "REST API"],
+    "tech": ["Electronics", "C++", "Arduino"],
     "platforms": ["MdiStar"],
     "link": "https://github.com/nbakh16/career-portfolio-template",
-    "category": "Hobby"
+    "category": "Personal"
   },
   {
     "title": "Starlight Clock",
     "description": "A minimalist desktop clock that comes to life with points of life at the wave of a hand. Hundreds of fiber optic cables shimmer to life and display the time as a constelation of stars.",
     "images": ["StarClockOn.jpg", "StarClockOff.jpg"],
-    "tech": ["Flutter", "Dart", "REST API"],
+    "tech": ["Electronics", "C++", "Arduino"],
     "platforms": ["MdiStar"],
     "link": "https://github.com/nbakh16/career-portfolio-template",
-    "category": "Hobby"
+    "category": "Personal"
   },
   {
     "title": "Mechanical Sinosoid Generator",
     "description": "Purely mechanical device that can draw a perfect sinosoid as well as calcualte its values using a series of linkages.",
     "images": ["SinosoidilatorHero.jpg", "SinosoidilatorDeconstructed.jpg"],
-    "tech": ["Flutter", "Dart", "REST API"],
+    "tech": ["Mechanics"],
     "platforms": ["MdiStar"],
     "link": "https://github.com/nbakh16/career-portfolio-template",
-    "category": "Hobby"
+    "category": "Personal"
   },
   {
     "title": "Custom 'Tamagotchi'",
     "description": "A pocket sized interactive pet, programmed entirely in C++ using the ESP32-C3 micro.",
     "images": ["astro-02.jpeg"],
-    "tech": ["Flutter", "Dart", "REST API"],
+    "tech": ["Electronics", "C++", "ESP32-c3"],
     "platforms": ["MdiStar"],
     "link": "https://github.com/nbakh16/career-portfolio-template",
-    "category": "Hobby"
+    "category": "Personal"
   },
   {
     "title": "Puzzle Game solver",
     "description": "A custom Depth First Search algorithm implemented in C++ used to solve a popular mobile puzzle game, 'Block Fill'. Along with solving boards, the program can even search for new unique boards with only one solution which the user can then play themselves",
     "images": ["BlockFillSolve.png", "BlockFillFind.png"],
-    "tech": ["Flutter", "Dart", "REST API"],
+    "tech": ["C++"],
     "platforms": ["MdiStar"],
     "link": "https://github.com/nbakh16/career-portfolio-template",
-    "category": "Hobby"
-  },
-  {
-    "title": "Modular Caster system for a Helicopter",
-    "description": "A comprehensive, modular system for mounting and moving equiptment in a air ambulance. This group project built on a solid foundation of market identification, stakeholder interviews, and standards research, resulted in a rully realised and documented mechanical design for locking, modular, caster. This model was then prototyped and presented, gaining the highest possible grade for the cource.",
-    "images": ["CasterHero.png", "CasterHeli.png", "CasterExploded.png", "CasterRender.png"],
-    "tech": ["Flutter", "Dart", "REST API"],
-    "platforms": ["MdiStar"],
-    "link": "https://github.com/nbakh16/career-portfolio-template",
-    "category": "University Project"
+    "category": "Personal"
   },
   {
     "title": "Multi-tool Wallet",
     "description": "A Sleek, 5mm thick wallet incorpirating a pocket knife, two bit drivers, and a fire starter.",
     "images": ["astro-02.jpeg"],
-    "tech": ["Flutter", "Dart", "REST API"],
+    "tech": ["Mechanics"],
     "platforms": ["MdiStar"],
     "link": "https://github.com/nbakh16/career-portfolio-template",
-    "category": "Hobby"
+    "category": "Personal"
   },
   {
     "title": "Self watering Plant Pot",
     "description": "A Planter able to store and provide two weeks worth of water using zero electronics.",
     "images": ["astro-02.jpeg"],
-    "tech": ["Flutter", "Dart", "REST API"],
+    "tech": ["Mechanics"],
     "platforms": ["MdiStar"],
     "link": "https://github.com/nbakh16/career-portfolio-template",
     "category": "High School Project"
@@ -103,7 +103,7 @@
     "title": "Heart rate monitor",
     "description": "An IR based device that uses inteligent heuristic algorithms and a completely custom PCB to record and display heart rate in real time.",
     "images": ["astro-02.jpeg"],
-    "tech": ["Flutter", "Dart", "REST API"],
+    "tech": ["Electronics", "Python", "C++"],
     "platforms": ["MdiStar"],
     "link": "https://github.com/nbakh16/career-portfolio-template",
     "category": "University Project"
@@ -112,16 +112,16 @@
     "title": "Camper Van",
     "description": "A custom-built camper van designed for off-grid adventures. Featuring a full solar power system, water storage, and a transformable living space.",
     "images": ["VanLandscape.jpeg", "VanSit.jpg", "VanLie.jpg"],
-    "tech": ["Flutter", "Dart", "REST API"],
+    "tech": ["Electronics", "Mechanics"],
     "platforms": ["MdiStar"],
     "link": "https://github.com/nbakh16/career-portfolio-template",
-    "category": "Hobby"
+    "category": "Personal"
   },
   {
     "title": "Robotic Butler",
     "description": "My Final A-Level DT project, a fully functional small scale robot designed to deliver dishes in a resteraunt environment.",
     "images": ["astro-02.jpeg"],
-    "tech": ["Flutter", "Dart", "REST API"],
+    "tech": ["Electronics", "Mechanics", "Robotics", "C++"],
     "platforms": ["MdiStar"],
     "link": "https://github.com/nbakh16/career-portfolio-template",
     "category": "Collage Project"
@@ -130,16 +130,16 @@
     "title": "Evolutional Gearbox Generator",
     "description": "Originaly programmed for the mechanical sinosoid generator, this programme uses an evelutional algorithm to generate gearboxes with very specific ratios. This unique aproach allows the user to weigh objectives such as gear sizes, co-primes, number of stages, and target overall ratio to identify all possible gearboxes and their rankings.",
     "images": ["astro-02.jpeg"],
-    "tech": ["Python", "Dart", "REST API"],
+    "tech": ["Python"],
     "platforms": ["MdiStar"],
     "link": "https://github.com/nbakh16/career-portfolio-template",
-    "category": "Hobby"
+    "category": "Personal"
   },
   {
     "title": "Sculptural Led Crystals",
     "description": "In colaboration with Jack Wimperis for boomtown festival, we designed and built 10 towers ranging from 4 to 10 meters in height. These were covered in over 40 thousand individualy adressable leds which I mapped in 3d. This allowed me to controll this monolithic structure, displaying custom, reactive, real time rendered effects.",
     "images": ["astro-02.jpeg"],
-    "tech": ["Python", "Dart", "REST API"],
+    "tech": ["Electronics", "Touch Designer"],
     "platforms": ["MdiStar"],
     "link": "https://github.com/nbakh16/career-portfolio-template",
     "category": "Freelance"
@@ -148,7 +148,16 @@
     "title": "Anamatronic Motion controller",
     "description": "While working for Wake The Tiger I had to animate many objects using a variety of sctuators. The motion controller is a standardised board I designed with the capability of driving steppers, dc motors, solenoids, leds, servos, and more. This was combined with a custom firmware that made it easy to drive any of these devices with an array of built in modes and let multiple boards comunicate with each other.",
     "images": ["astro-02.jpeg"],
-    "tech": ["Python", "Dart", "REST API"],
+    "tech": ["Electronics", "Robotics", "C++"],
+    "platforms": ["MdiStar"],
+    "link": "https://github.com/nbakh16/career-portfolio-template",
+    "category": "Freelance"
+  },
+  {
+    "title": "Rotating Painting Frame",
+    "description": "In colaberation with Cory Burr Design, we designed and built a painting frame capable of rotating 360 degrees. I designed and built the cutom electrical system which included the stepper driven frame with magnetic homing, and a wireless controller",
+    "images": ["astro-02.jpeg"],
+    "tech": ["Electronics", "Mechanics", "Robotics", "C++"],
     "platforms": ["MdiStar"],
     "link": "https://github.com/nbakh16/career-portfolio-template",
     "category": "Freelance"

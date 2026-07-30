@@ -9,6 +9,10 @@ const LOAD_MORE_COUNT = 3;  // Projects to reveal per click
 
 const totalProjects = projectsData.length;
 const hasMoreMobile = totalProjects > INITIAL_MOBILE;
+
+// --- EXTRACT UNIQUE TECHS ---
+const allTechs = projectsData.flatMap((project: any) => project.tech || []);
+const uniqueTechs = [...new Set(allTechs)].sort();
 ---
 
 <section id="projects" class="section-container overflow-hidden">
