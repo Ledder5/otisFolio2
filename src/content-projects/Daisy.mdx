@@ -1,11 +1,18 @@
 import ProjectButton from '../components/ProjectButton.astro';
 import YouTube from '../components/YouTube.astro';
+import { Image } from 'astro:assets';
+import Thumbnail from '../assets/DaisyThumbnail.png';
 
 ## The Problem
 Standard markdown is great, but we needed a way to embed rich interactive elements directly into the case study. By utilizing MDX, we can combine regular formatted text with our custom Astro components!
 
 Here is an image using standard markdown syntax:
-![Project Architecture](/images/architecture-diagram.png)
+
+<Image 
+  src={Thumbnail} 
+  alt="A diagram showing the project architecture" 
+  class="w-full rounded-2xl border border-accent/20 shadow-lg my-8"
+/>
 
 ## The Solution
 We built a custom component library. Here is a demonstration video:

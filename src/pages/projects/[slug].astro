@@ -1,8 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import projectsData from '../../data/projects.json';
-import Icon from '../../components/Icon.astro';
-import { Image } from 'astro:assets';
 import { resolveAssetImage } from '../../utils/images';
 
 export const prerender = true;
@@ -27,11 +25,6 @@ if (!project) {
   return Astro.redirect('/#projects');
 }
 
-// 5. Resolve the hero image safely
-const heroImageMetadata = project.images && project.images.length > 0
-  ? await resolveAssetImage(project.images[0])
-  : null;
-
 // 6. DYNAMICALLY LOAD THE MATCHING MDX FILE
 // This grabs all .mdx files in the content-projects folder
 const mdxFiles = import.meta.glob('../../content-projects/*.mdx');
@@ -47,7 +40,7 @@ if (mdxFiles[postPath]) {
 
 <Layout title={`${project.title} | Portfolio`}>
   
-  <main class="pt-24 pb-20 max-w-4xl mx-auto px-6 sm:px-12 relative z-10">
+  <div class="pt-24 pb-20 w-full mx-auto relative z-10">
     
     <a href="/#projects" class="inline-flex items-center gap-2 text-subtext hover:text-accent transition-colors font-body text-sm mb-12 group">
       <div class="p-2 rounded-full bg-accent/5 group-hover:bg-accent/20 transition-colors border border-accent/10">
@@ -71,22 +64,8 @@ if (mdxFiles[postPath]) {
       </div>
     </header>
 
-    {heroImageMetadata && (
-      <div class="w-full aspect-video rounded-3xl overflow-hidden mb-16 border border-accent/10 shadow-[0_0_40px_rgba(var(--accent-rgb),0.1)]">
-        <Image 
-          src={heroImageMetadata} 
-          alt={project.title} 
-          class="w-full h-full object-cover"
-        />
-      </div>
-    )}
-
     <!-- RENDER THE MDX CONTENT HERE -->
     <article class="prose prose-invert prose-p:text-subtext prose-p:font-body prose-p:leading-relaxed prose-headings:font-heading prose-headings:text-maintext prose-a:text-accent hover:prose-a:text-accent/80 max-w-none">
-      
-      <p class="text-xl sm:text-2xl text-maintext/90 font-light mb-12 leading-relaxed">
-        {project.description}
-      </p>
       
       <div class="h-px w-full bg-gradient-to-r from-accent/0 via-accent/20 to-accent/0 mb-12"></div>
 
@@ -98,5 +77,5 @@ if (mdxFiles[postPath]) {
 
     </article>
 
-  </main>
+  </div>
 </Layout>
