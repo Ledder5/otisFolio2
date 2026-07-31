@@ -4,7 +4,7 @@
     "role": "BEng in Mechatronic Engineering",
     "period": "Sep 2022 - Jul 2026",
     "type": "Student",
-    "description": "One of two students to acheive a first-class honours degree in Mechatronic Engineering at a Russell Group university. Focused on robotics, control, and embedded systems.",
+    "description": "One of two students to achieve a first-class honours degree in Mechatronic Engineering at a Russell Group, University of Glasgow. Focused on robotics, control, and embedded systems.",
     "skills": []
   },
   {
@@ -20,7 +20,7 @@
     "role": "Animatronic Engineer",
     "period": "Jan 2022 - May 2022",
     "type": "Freelance",
-    "description": "Designing and installing custom anamatronic systems for various rooms in Wake The Tiger Amazement park. Work included a custom motion controller board used to make self-typing typewriters, Analogue thunderstorm effects, and aninteractive time machine dashboard.",
+    "description": "Designing and installing custom animatronic systems for various rooms in Wake The Tiger Amazement park. Work included a custom motion controller board used to make self-typing typewriters, Analogue thunderstorm effects, and an interactive time machine dashboard.",
     "skills": ["Collaboration", "C++", "Robotics", "PCB Design"]
   },
   {

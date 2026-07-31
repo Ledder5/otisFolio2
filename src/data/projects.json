@@ -2,7 +2,7 @@
   {
     "title": "Daisy Chain Making Robot",
     "slug": "Daisy",
-    "description": "My final year project involving the design and implementation of a robot capable of creating daisy chains. This final thesis demonstrated my proficiency in all thre pillars of robotics, electrical design, mechanical engineering, and computer science. This project earned an award from the Instiute of Electronic Engineering for the best manufacturing project in the whole of the University of Glasgow.",
+    "description": "My final year project involving the design and implementation of a robot capable of creating daisy chains. This final thesis demonstrated my proficiency in all three pillars of robotics, electrical design, mechanical engineering, and computer science. This project earned an award from the Institute of Electronic Engineering for the best manufacturing project in the whole of the University of Glasgow.",
     "images": ["DaisyThumbnail.png", "DaisyHero.png"],
     "tech": ["Electronics", "Mechanics", "Robotics", "Python"],
     "platforms": ["MdiStar"],
@@ -11,7 +11,7 @@
   {
     "title": "Modular Caster System",
     "slug" : "ModularCaster",
-    "description": "A comprehensive, modular system for mounting and moving equiptment in a air ambulance. This group project built on a solid foundation of market identification, stakeholder interviews, and standards research, resulted in a rully realised and documented mechanical design for locking, modular, caster. This model was then prototyped and presented, gaining the highest possible grade for the cource.",
+    "description": "A comprehensive, modular system for mounting and moving equipment in a air ambulance. This group project built on a solid foundation of market identification, stakeholder interviews, and standards research, resulted in a fully realised and documented mechanical design for locking, modular, caster. This model was then prototyped and presented, gaining the highest possible grade for the course.",
     "images": ["CasterHero.png", "CasterHeli.png", "CasterExploded.png", "CasterRender.png"],
     "tech": ["Mechanics"],
     "platforms": ["MdiStar"],
@@ -19,7 +19,7 @@
   },
   {
     "title": "Sculptural Led Crystals",
-    "description": "In colaboration with Jack Wimperis for boomtown festival, we designed and built 10 towers ranging from 4 to 10 meters in height. These were covered in over 40 thousand individualy adressable leds which I mapped in 3d. This allowed me to controll this monolithic structure, displaying custom, reactive, real time rendered effects.",
+    "description": "In collaboration with Jack Wimperis for boomtown festival, we designed and built 10 towers ranging from 4 to 10 meters in height. These were covered in over 40 thousand individually addressable leds which I mapped in 3d. This allowed me to control this monolithic structure, displaying custom, reactive, real time rendered effects.",
     "images": ["CrystalTowerWhite.jpg", "CrystalTowerDay.png", "CrystalTowerCrowd.png"],
     "tech": ["Electronics", "Touch Designer"],
     "platforms": ["MdiStar"],
@@ -28,7 +28,7 @@
   },
   {
     "title": "Machine Learning Prediction",
-    "description": "As part of a university cource in AI and machine learning I programmed and tuned a series of machine learning algorithms to predict the age of an abalone. Among the models investigated were, neural networks, decision trees, radial bias vector support vector machine, a number of linear regression models, and more.",
+    "description": "As part of a university course in AI and machine learning I programmed and tuned a series of machine learning algorithms to predict the age of an abalone. Among the models investigated were, neural networks, decision trees, radial bias vector support vector machine, a number of linear regression models, and more.",
     "images": ["MlMlpLayers.png", "MlMlp.png", "MlLinearRegression.png"],
     "tech": ["Python"],
     "platforms": ["MdiStar"],
@@ -36,8 +36,8 @@
     "category": "University Project"
   },
   {
-    "title": "Anamatronic Motion controller",
-    "description": "While working for Wake The Tiger I had to animate many objects using a variety of sctuators. The motion controller is a standardised board I designed with the capability of driving steppers, dc motors, solenoids, leds, servos, and more. This was combined with a custom firmware that made it easy to drive any of these devices with an array of built in modes and let multiple boards comunicate with each other.",
+    "title": "Animatronic Motion controller",
+    "description": "While working for Wake The Tiger I had to animate many objects using a variety of actuators. The motion controller is a standardised board I designed with the capability of driving steppers, dc motors, solenoids, leds, servos, and more. This was combined with a custom firmware that made it easy to drive any of these devices with an array of built in modes and let multiple boards communicate with each other.",
     "images": ["MotionPcb.png", "MotionRoom.webp"],
     "tech": ["Electronics", "Robotics", "C++", "Arduino"],
     "platforms": ["MdiStar"],
@@ -46,7 +46,7 @@
   },
   {
     "title": "NFC Record Player",
-    "description": "An record stand that scans NFC tags and communicates with the spotify API in order to play the coresponding albums on your devices.",
+    "description": "An record stand that scans NFC tags and communicates with the spotify API in order to play the corresponding albums on your devices.",
     "images": ["RecordWide.jpg", "RecordHero.jpg"],
     "tech": ["Electronics", "C++", "ESP32"],
     "platforms": ["MdiStar"],
@@ -55,7 +55,7 @@
   },
   {
     "title": "Buckets and Buckets of Light",
-    "description": "In colaboration with Jack Wimperis, we designed and built a 6 x 4 x 100 pixel LED Matrix with a fully 3d and reactive programme developed by me in TouchDesigner. This sculpture was displayed at the award winning 'Leeds Light Night' in 2025. For this project I also made a fully punctional scale replica of the sculpture for programme development and marketing.",
+    "description": "In collaboration with Jack Wimperis, we designed and built a 6 x 4 x 100 pixel LED Matrix with a fully 3d and reactive programme developed by me in TouchDesigner. This sculpture was displayed at the award winning 'Leeds Light Night' in 2025. For this project I also made a fully functional scale replica of the sculpture for programme development and marketing.",
     "images": ["BucketWide.jpg", "BucketClose.jpg", "BucketMid.jpg"],
     "tech": ["Electronics", "Touch Designer"],
     "platforms": ["MdiStar"],
@@ -63,8 +63,8 @@
     "category": "Freelance"
   },
   {
-    "title": "Mechanical Sinosoid Generator",
-    "description": "Purely mechanical device that can draw a perfect sinosoid as well as calcualte its values using a series of linkages.",
+    "title": "Mechanical Sinusoid Generator",
+    "description": "Purely mechanical device that can draw a perfect sinusoid as well as calculate its values using a series of linkages.",
     "images": ["SinosoidilatorHero.jpg", "SinosoidilatorDeconstructed.jpg"],
     "tech": ["Mechanics"],
     "platforms": ["MdiStar"],
@@ -73,7 +73,7 @@
   },
   {
     "title": "Crystal Lamps",
-    "description": "Crystal inspired lamp with touch responsive controlls and custom effects. 100 adressable leds light up the gemoetric, mirrored interior of a crystal with mesmorising effects. The colour, speed, and brightness are controllable for all 4 of the lamps generative lighting effects.",
+    "description": "Crystal inspired lamp with touch responsive controls and custom effects. 100 addressable leds light up the geometric, mirrored interior of a crystal with memorising effects. The colour, speed, and brightness are controllable for all 4 of the lamps generative lighting effects.",
     "images": ["CrystalLampLit.jpg", "CrystalLampOutside.jpg"],
     "tech": ["Electronics", "C++", "Arduino"],
     "platforms": ["MdiStar"],
@@ -82,7 +82,7 @@
   },
   {
     "title": "Lactolight Reactive Wall",
-    "description": "In colaboration with Jack Wimperis, lactolight is a led screen made entirely from recycled milk cartons. It uses a kinect depth camera to capture the audience and react to their movement with unique 4 effects.",
+    "description": "In collaboration with Jack Wimperis, lactolight is a led screen made entirely from recycled milk cartons. It uses a kinect depth camera to capture the audience and react to their movement with unique 4 effects.",
     "images": ["LactoFire.jpg", "LactoDraw.jpg", "LactoRainbow.jpg"],
     "tech": ["Electronics", "Touch Designer"],
     "platforms": ["MdiStar"],
@@ -91,27 +91,9 @@
   },
   {
     "title": "Starlight Clock",
-    "description": "A minimalist desktop clock that comes to life with points of life at the wave of a hand. Hundreds of fiber optic cables shimmer to life and display the time as a constelation of stars.",
+    "description": "A minimalist desktop clock that comes to life with points of life at the wave of a hand. Hundreds of fibre optic cables shimmer to life and display the time as a constellation of stars.",
     "images": ["StarClockOn.jpg", "StarClockOff.jpg"],
     "tech": ["Electronics", "C++", "Arduino"],
-    "platforms": ["MdiStar"],
-    "link": "https://github.com/nbakh16/career-portfolio-template",
-    "category": "Personal"
-  },
-  {
-    "title": "Rotating Painting Frame",
-    "description": "In colaberation with Cory Burr Design, we designed and built a painting frame capable of rotating 360 degrees. I designed and built the cutom electrical system which included the stepper driven frame with magnetic homing, and a wireless controller",
-    "images": ["astro-02.jpeg"],
-    "tech": ["Electronics", "Mechanics", "Robotics", "C++", "Arduino"],
-    "platforms": ["MdiStar"],
-    "link": "https://github.com/nbakh16/career-portfolio-template",
-    "category": "Freelance"
-  },
-  {
-    "title": "Custom 'Tamagotchi'",
-    "description": "A pocket sized interactive pet, programmed entirely in C++ using the ESP32-C3 micro.",
-    "images": ["astro-02.jpeg"],
-    "tech": ["Electronics", "C++", "ESP32"],
     "platforms": ["MdiStar"],
     "link": "https://github.com/nbakh16/career-portfolio-template",
     "category": "Personal"
@@ -127,7 +109,7 @@
   },
   {
     "title": "Multi-tool Wallet",
-    "description": "A Sleek, 5mm thick wallet incorpirating a pocket knife, two bit drivers, and a fire starter.",
+    "description": "A Sleek, 5mm thick wallet incorporating a pocket knife, two bit drivers, and a fire starter.",
     "images": ["WalletExplode.png", "WalletRender.png"],
     "tech": ["Mechanics"],
     "platforms": ["MdiStar"],
@@ -136,7 +118,7 @@
   },
   {
     "title": "Heart rate monitor",
-    "description": "An IR based device that uses inteligent heuristic algorithms and a completely custom PCB to record and display heart rate in real time.",
+    "description": "An IR based device that uses intelligent heuristic algorithms and a completely custom PCB to record and display heart rate in real time.",
     "images": ["HeartratePcb.png", "HeartrateSignal.png"],
     "tech": ["Electronics", "Python", "C++", "STM32"],
     "platforms": ["MdiStar"],
@@ -154,7 +136,7 @@
   },
   {
     "title": "Robotic Butler",
-    "description": "My Final A-Level DT project, a fully functional small scale robot designed to deliver dishes in a resteraunt environment.",
+    "description": "My Final A-Level DT project, a fully functional small scale robot designed to deliver dishes in a restaurant environment.",
     "images": ["RobutlerHero.jpg", "RobutlerSkeleton.png"],
     "tech": ["Electronics", "Mechanics", "Robotics", "C++", "Arduino"],
     "platforms": ["MdiStar"],
@@ -163,9 +145,27 @@
   },
   {
     "title": "Evolutional Gearbox Generator",
-    "description": "Originaly programmed for the mechanical sinosoid generator, this programme uses an evelutional algorithm to generate gearboxes with very specific ratios. This unique aproach allows the user to weigh objectives such as gear sizes, co-primes, number of stages, and target overall ratio to identify all possible gearboxes and their rankings.",
+    "description": "Originally programmed for the mechanical sinusoid generator, this programme uses an evolutional algorithm to generate gearboxes with very specific ratios. This unique approach allows the user to weigh objectives such as gear sizes, co-primes, number of stages, and target overall ratio to identify all possible gearboxes and their rankings.",
     "images": ["GearboxPopulation.png", "GearboxFitness.png", "GearboxResult.png"],
     "tech": ["Python"],
+    "platforms": ["MdiStar"],
+    "link": "https://github.com/nbakh16/career-portfolio-template",
+    "category": "Personal"
+  },
+  {
+    "title": "Rotating Painting Frame",
+    "description": "In collaboration with Cory Burr Design, we designed and built a painting frame capable of rotating 360 degrees. I designed and built the custom electrical system which included the stepper driven frame with magnetic homing, and a wireless controller",
+    "images": ["astro-02.jpeg"],
+    "tech": ["Electronics", "Mechanics", "Robotics", "C++", "Arduino"],
+    "platforms": ["MdiStar"],
+    "link": "https://github.com/nbakh16/career-portfolio-template",
+    "category": "Freelance"
+  },
+  {
+    "title": "Custom 'Tamagotchi'",
+    "description": "A pocket sized interactive pet, programmed entirely in C++ using the ESP32-C3 micro.",
+    "images": ["astro-02.jpeg"],
+    "tech": ["Electronics", "C++", "ESP32"],
     "platforms": ["MdiStar"],
     "link": "https://github.com/nbakh16/career-portfolio-template",
     "category": "Personal"
