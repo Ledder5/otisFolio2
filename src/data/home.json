@@ -1,8 +1,8 @@
 {
   "name": "Jude Otis Robinson",
   "photoUrl": "selfie.jpg",
-  "intro": "This website is currently under construction, some content may be unfinished or inaccurate.",
-  "introHtml": "This website is currently under construction, some content may be unfinished or inaccurate.",
+  "intro": "I am a mechatronic engineer with a passion for prototyping, and robotics. Browse my projects, skills, career, and reach out so we can make something!",
+  "introHtml": "I am a mechatronic engineer with a passion for prototyping, and robotics. Browse my projects, skills, career, and reach out so we can make something!",
   "webpageTitle": "Jude Otis",
   "resumeUrl": "https://example-files.online-convert.com/document/pdf/example.pdf",
 
@@ -40,7 +40,7 @@
     },
     {
       "name": "Whatsapp",
-      "url": "https://wa.me/07470546485",
+      "url": "https://wa.me/447470546485",
       "icon": "MdiWhatsapp",
       "showInContact": true
     },
