@@ -1,6 +1,7 @@
 ---
 import ProjectCard from './project-card.astro';
 import projectsData from '../data/projects.json';
+import Icon from '../components/Icon.astro';
 
 // --- CONFIGURATION ---
 const INITIAL_MOBILE = 3;   // Projects shown on mobile first load
@@ -27,21 +28,48 @@ const uniqueTechs = [...new Set(allTechs)].sort();
     </div>
 
     {/* --- NEW FILTER BAR --- */}
-    <div class="mb-12 flex flex-wrap gap-2 md:gap-3 project-header">
+    {/* We moved the bg, border, and padding to this outer wrapper, hiding them on desktop! */}
+    <div class="mb-12 project-header group bg-accent/5 rounded-2xl border border-accent/10 p-4 md:!bg-transparent md:!border-none md:!p-0" id="filter-group">
+      
+      {/* Mobile Toggle Button (Hidden on Desktop) */}
       <button 
-        class="filter-btn active-filter px-4 py-1.5 rounded-full text-xs font-body border border-accent/10 bg-transparent text-subtext transition-all hover:border-accent/40 hover:text-maintext cursor-pointer" 
-        data-tech="all"
+        id="mobile-filter-toggle" 
+        class="md:hidden flex items-center justify-between w-full text-maintext text-sm font-body cursor-pointer transition-all mb-0 group-[.is-open]:mb-4"
       >
-        All
+        <span class="flex items-center gap-2">
+          <Icon name="MdiFilterOutline" class="w-5 h-5 text-accent" /> 
+          Filter Projects
+        </span>
+        <Icon 
+          name="MdiChevronDown" 
+          class="w-6 h-6 text-accent transition-transform duration-500 group-[.is-open]:rotate-180" 
+        />
       </button>
-      {uniqueTechs.map(tech => (
-        <button 
-          class="filter-btn px-4 py-1.5 rounded-full text-xs font-body border border-accent/10 bg-transparent text-subtext transition-all hover:border-accent/40 hover:text-maintext cursor-pointer" 
-          data-tech={tech}
-        >
-          {tech}
-        </button>
-      ))}
+
+      {/* Animated Wrapper: Height 0 on mobile unless open, always full height on desktop */}
+      <div class="grid grid-rows-[0fr] opacity-0 group-[.is-open]:grid-rows-[1fr] group-[.is-open]:opacity-100 md:!grid-rows-[1fr] md:!opacity-100 md:!mt-0 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]">
+        <div class="overflow-hidden min-h-0">
+          
+          {/* The Actual Buttons */}
+          <div class="flex flex-wrap gap-2 md:gap-3 pb-1 md:pb-0">
+            <button 
+              class="filter-btn active-filter px-4 py-1.5 rounded-full text-xs font-body border border-accent/10 bg-transparent text-subtext transition-all hover:border-accent/40 hover:text-maintext cursor-pointer" 
+              data-tech="all"
+            >
+              All
+            </button>
+            {uniqueTechs.map(tech => (
+              <button 
+                class="filter-btn px-4 py-1.5 rounded-full text-xs font-body border border-accent/10 bg-transparent text-subtext transition-all hover:border-accent/40 hover:text-maintext cursor-pointer" 
+                data-tech={tech}
+              >
+                {tech}
+              </button>
+            ))}
+          </div>
+
+        </div>
+      </div>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
@@ -125,7 +153,20 @@ const uniqueTechs = [...new Set(allTechs)].sort();
 
 <script>
   const initProjectReveal = () => {
+    
+    // 0. --- MOBILE DROPDOWN LOGIC ---
+    const filterToggle = document.getElementById('mobile-filter-toggle');
+    const filterGroup = document.getElementById('filter-group');
+    
+    if (filterToggle && filterGroup && !filterToggle.hasAttribute('data-bound')) {
+      filterToggle.addEventListener('click', () => {
+        filterGroup.classList.toggle('is-open');
+      });
+      filterToggle.setAttribute('data-bound', 'true');
+    }
+
     // 1. --- VIEW MORE BUTTON LOGIC ---
+    // ... (the rest of your existing script code) ...
     const btn = document.getElementById('view-more-btn');
     const container = document.getElementById('view-more-container');
     

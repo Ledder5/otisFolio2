@@ -4,7 +4,7 @@
     "role": "BEng in Mechatronic Engineering",
     "period": "Sep 2022 - Jul 2026",
     "type": "Student",
-    "description": "One of two students to achieve a first-class honours degree in Mechatronic Engineering at a Russell Group, University of Glasgow. Focused on robotics, control, and embedded systems.",
+    "description": "One of two students to achieve a first-class honours degree in Mechatronic Engineering at the University of Glasgow. Focused on robotics, control, and embedded systems. My time at Glasgow University concluded with an IET award winning individual project to make a daisy chaining robot, which can be read about above.",
     "skills": []
   },
   {
@@ -12,7 +12,7 @@
     "role": "Lead Electronic and software Engineer",
     "period": "Oct 2019 - Present",
     "type": "Freelance",
-    "description": "Working with award winning artist Jack Wimperis bringing to life sculptural lighting installations. Responsible for the electronic design software control for events such as Glastonbury, Boomtown, Leeds light night, and more.",
+    "description": "Working with award winning artist Jack Wimperis bringing to life sculptural lighting installations. Responsible for the electronic design and software control for events such as Glastonbury, Boomtown, Leeds light night, and more.",
     "skills": ["Leadership", "Power Electronics", "TouchDesigner"]
   },
   {
@@ -28,7 +28,7 @@
     "role": "Electronics consultant",
     "period": "Mar 2022 - May 2022",
     "type": "Freelance",
-    "description": "Bought on to manufacture a completely custom wireless controller and motion driver for a client.",
+    "description": "Bought on to manufacture a custom wireless controller and motion driver for a client, allowing an interactive experience in a high art environment.",
     "skills": ["C++", "Arduino", "Mechanical Design", "PCB Design", "Manufacture"]
   }
   
