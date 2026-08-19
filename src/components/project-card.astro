@@ -15,7 +15,7 @@ const validImages = optimizedImages.filter(Boolean);
 const isSlider = validImages.length > 1;
 ---
 
-<div class="project-card relative w-full aspect-[4/3] sm:aspect-[16/10] rounded-2xl overflow-hidden group cursor-pointer border border-accent/10 hover:border-accent/40 transition-colors shadow-lg">
+<div class="project-card relative w-full aspect-[4/3] sm:aspect-[16/10] rounded-2xl overflow-hidden group cursor-pointer border border-accent/10 hover:border-accent/40 transition-colors shadow-lg dark:shadow-[0_15px_40px_-10px_color-mix(in_srgb,var(--color-accent),transparent_80%)]">
 
   <div class={`absolute inset-0 z-0 bg-background/50 ${isSlider ? 'image-slider' : ''}`}>
     {
